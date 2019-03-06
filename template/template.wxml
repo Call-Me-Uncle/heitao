@@ -1,0 +1,38 @@
+<template name="tipsDialog">
+    <view class="tipsContainer" hidden="{{!tipsInfo.show}}">
+        <view bindtap="tipsPageClose" class="tipsPageClose"></view>
+        <view class="tipsContent">
+            <image class="tipsImg" mode="widthFix" src="{{tipsInfo.tipsImg}}"></image>
+            <view class="tipsMain">
+                {{tipsInfo.tipsText}}
+            </view>
+            <view class="tipsName">——黑桃大师</view>
+            <view class="tipsAI">
+                <image class="tipsEWM" src="{{tipsInfo.tipsEwm}}"></image>
+                <view>扑克个性化培训AI</view>
+            </view>
+            <image bindtap="tipsPageClose" class="tipsClose" src="../../images/train/close1.png"></image>
+        </view>
+    </view>
+</template>
+<template name="imgScroll">
+    <view class="imgScrollContent" hidden="{{imgScroll}}">
+        <view class="imgScroll">
+            <scroll-view scrollY="{{true}}">
+                <image class="imgScrollImg2" mode="widthFix" src="{{imgSrc}}"></image>
+            </scroll-view>
+            <image bindtap="closeImgScroll" class="imgScrollImg1" src="../../images/train/close1.png"></image>
+        </view>
+    </view>
+</template>
+<template name="playAction">
+    <view hidden="{{!playAction}}">
+        <view class="playAction"></view>
+        <view bindtap="playActionClick" class="playActionContent" style="width: {{playActionWidth}}rpx;text-align: left;">
+            <text class="playActionInfo {{playColor}}">{{playActionInfo}}</text>
+            <view class="playActionButton">
+                <text>→{{button}}</text>
+            </view>
+        </view>
+    </view>
+</template>

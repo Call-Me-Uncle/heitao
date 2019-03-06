@@ -1,0 +1,95 @@
+@import "../../template/template.wxss";
+
+.main {
+    width: 690rpx;
+    padding: 0 30rpx;
+    background: #fff;
+    margin-top: 30rpx;
+}
+
+.main .titleTop {
+    display: flex;
+    justify-content: space-between;
+    height: 70rpx;
+    align-items: center;
+}
+
+.main .titleTop .titleName {
+    font-size: 34rpx;
+    font-weight: 700;
+}
+
+.main .titleTop .titleMore {
+    display: flex;
+    align-items: center;
+}
+
+.main .titleTop .titleMore .moreName {
+    font-size: 30rpx;
+    color: #999;
+    margin-right: 10rpx;
+}
+
+.main .titleTop .titleMore .moreIcon {
+    width: 18rpx;
+    height: 32rpx;
+}
+
+.main .lists .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.main .lists .item image {
+    width: 300rpx;
+    height: 160rpx;
+}
+
+.main .lists .item .title {
+    width: 370rpx;
+    height: 160rpx;
+}
+
+.main .lists .item .title .titleName {
+    font-size: 32rpx;
+    font-weight: 700;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main .lists .item .title .titleInfo {
+    font-size: 28rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+}
+
+.topImg {
+    width: 100%;
+    display: block;
+}
+
+#myVideo {
+    position: absolute;
+    width: 750rpx;
+    height: 400rpx;
+    z-index: 1000;
+}
+
+.show {
+    display: show;
+}
+
+.hide {
+    display: none;
+}

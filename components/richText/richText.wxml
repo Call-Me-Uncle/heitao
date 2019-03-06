@@ -1,0 +1,6 @@
+<view class="richText" style="text-align: {{item.text_position}};display: inline; line-height:{{item.font_size=='30px'?'70rpx':'45rpx'}};" wx:for="{{textValue}}" wx:key="{{index}}">
+    <text catchtap="{{item.is_click?'clickNouns':''}}" data-info="{{item.text}}" decode="{{true}}" style="color:{{item.color}};font-size:{{item.font_size}};font-weight:{{item.weight}};text-align: {{item.text_position}};border-bottom: {{item.is_click?'2rpx':'0'}} solid {{item.color}};" wx:if="{{item.type=='text'}}">{{item.text}}</text>
+    <text catchtap="clickNouns" data-url="{{item.url}}" decode="{{true}}" style="color:{{item.color}};text-decoration-line:underline;font-size:{{item.font_size}};font-weight:{{item.weight}};text-align: {{item.text_position}};border-bottom: 2rpx solid {{item.color}};" wx:if="{{item.type=='url'}}">{{item.text}}</text>
+    <text catchtap="copy" class="copy" data-info="{{item.text}}" decode="{{true}}" style="color:{{item.color}};font-size:{{item.font_size}};font-weight:{{item.weight}};text-align: {{item.text_position}};border-bottom: {{item.is_click?'2rpx':'0'}} solid {{item.color}};" wx:if="{{item.type=='copy'}}">复制微信号</text>
+    <image src="{{item.text}}" style="width: 100%" wx:if="{{item.type=='img'}}"></image>
+</view>

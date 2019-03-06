@@ -1,0 +1,129 @@
+page {
+    width: 100%;
+}
+
+.weui-slider-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 1000rpx;
+    transform: rotate(-90deg);
+    margin: 0 auto;
+    margin-top: 520rpx;
+    height: 300rpx;
+    margin-left: -125rpx;
+}
+
+.weui-slider-box .weui-slider {
+    margin-left: 200rpx;
+    width: 750rpx;
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin-top: 20rpx;
+}
+
+.sliderProgress {
+    margin-left: 200rpx;
+    height: 20rpx;
+    background: rgb(28,96,75);
+    position: relative;
+    top: -21rpx;
+    left: -198rpx;
+    border-radius: 50rpx;
+}
+
+.weui-slider-inner {
+    position: relative;
+    height: 24rpx;
+    background-color: #eee;
+    border-radius: 50px;
+    width: 750rpx;
+}
+
+.weui-slider-track {
+    height: 20rpx;
+    background-color: #f5c018;
+    border-radius: 50px;
+    width: 0;
+}
+
+.weui-slider-handler {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 20px;
+    margin-left: -23px;
+    margin-top: -10px;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(169,169,169)),color-stop(41%,rgb(205,205,205)),color-stop(100%,rgb(177,177,177)));
+    background: linear-gradient(to bottom,rgb(169,169,169) 0%,rgb(205,205,205) 41%,rgb(177,177,177) 100%);
+    transform: rotate(90deg);
+    border-radius: 10rpx;
+    z-index: 100;
+}
+
+.isSliderContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.weui-slider-box-value {
+    margin-left: 0.5em;
+    min-width: 24px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    transform: rotate(90deg);
+}
+
+.weui-slider-box-value {
+    margin-left: 0.5em;
+    min-width: 24px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    transform: rotate(90deg);
+}
+
+.weui-slider-number {
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    left: -25px;
+    white-space: nowrap;
+    width: 100rpx;
+    top: -180rpx;
+}
+
+.add {
+    width: 100rpx;
+    height: 100rpx;
+    color: #fff;
+    border-radius: 100%;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(120,207,188)),color-stop(50%,rgb(0,59,53)),color-stop(100%,#000));
+    background: linear-gradient(to bottom,rgb(120,207,188) 0%,rgb(0,59,53) 50%,#000 100%);
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    position: absolute;
+    top: 485rpx;
+    left: 325rpx;
+}
+
+.bggg {
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -23px;
+    margin-top: -40px;
+    transform: rotate(90deg);
+}

@@ -1,0 +1,4 @@
+<header bind:back="back" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="加入交流群"></header>
+<scroll-view scrollY="{{true}}" style="height:{{scrollHeight}}px;">
+    <image mode="widthFix" src="{{img}}" style="width: 100%;"></image>
+</scroll-view>

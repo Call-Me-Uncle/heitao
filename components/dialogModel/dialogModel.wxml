@@ -1,0 +1,15 @@
+<view class="wx_dialog_container" hidden="{{!isShow}}">
+    <view catchtap="_cancelDialog" class="wx-mask"></view>
+    <view class="wx-dialog">
+        <view class="{{title==''?'':'wx-dialog-title'}}" style="color:{{titleColor}}">{{title}}</view>
+        <scroll-view class="wx-dialog-content" hidden="{{!contentHidden}}" scrollY="{{true}}" style="color:{{contentColor}}">
+            {{content}}
+        </scroll-view>
+        <view class="wx-dialog-footer wx-dialog-position">
+            <view catchtap="_cancelEvent" class="wx-dialog-btn first" wx:if="{{cancelText!=''}}">{{cancelText}}
+            </view>
+            <view catchtap="_confirmEvent" class="wx-dialog-btn second" wx:if="{{confirmText!=''}}">{{confirmText}}
+            </view>
+        </view>
+    </view>
+</view>

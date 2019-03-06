@@ -1,0 +1,143 @@
+<view wx:if="{{isShow}}">
+    <view catchtap="summaryClick" class="wx-mask"></view>
+    <view catchtap="summaryClick" class="wx-dialog">
+        <view class="summaryContent1" hidden="{{animationIndex==1?false:true}}">
+            <view class="wx-dialog-content summary">
+                <view class="top">
+                    <view class="imgContent">
+                        <image class="img" src="{{serverImg.userImg}}"></image>
+                    </view>
+                    <view class="scoreContent">
+                        <view class="userName">
+                            <text>{{userName}}</text>
+                        </view>
+                        <view class="userScore">
+                            <text>斩获：</text>
+                            <text class="fontColor">{{summary.firstPage.score}}分</text>
+                        </view>
+                    </view>
+                    <view class="seal" wx:if="{{summary.firstPage.stampName}}">
+                        <image src="{{serverImg.seal}}"></image>
+                        <text>{{summary.firstPage.stampName}}</text>
+                    </view>
+                </view>
+                <image class="lineImg" src="../../images/train/line.png"></image>
+                <view class="middle">
+                    <view>
+                        <text>{{summary.firstPage.trainResultInfo[0]}}</text>
+                        <text class="fontColor">{{summary.firstPage.trainResultInfo[1]}}</text>
+                        <text>{{summary.firstPage.trainResultInfo[2]}}</text>
+                    </view>
+                </view>
+                <view class="footTitle">
+                    <view class="ability">八项能力值</view>
+                    <canvas canvasId="abilityCanvas" class="abilityCanvas"></canvas>
+                </view>
+                <view class="shareInfo">
+                    <view>{{summary.firstPage.addWord1[0]}}</view>
+                    <view>{{summary.firstPage.addWord1[1]}}</view>
+                </view>
+            </view>
+            <view class="wx-dialog-footer">
+                <view class="buttonImg">
+                    <button catchtap="produceImg" class="wx-dialog-btn" data-name="produceImg">{{produceImg}}</button>
+                    <image src="../../images/icons/levelButton.png"></image>
+                </view>
+                <view class="buttonImg">
+                    <button catchtap="aaa" class="wx-dialog-btn" data-type="trainType" openType="share">{{confirmText}}</button>
+                    <image src="../../images/icons/levelButton.png"></image>
+                </view>
+                <view class="ewmImg">
+                    <image class="ewm" src="{{serverImg.ewm1}}"></image>
+                    <view class="ewmTop">黑桃大师</view>
+                    <view class="ewmInfo"> 扑克个性化培训AI</view>
+                </view>
+            </view>
+        </view>
+        <view class="summaryContent2" hidden="{{animationIndex==2?false:true}}">
+            <view class="summary1">
+                <view class="testTop">
+                    <view class="testLogo">
+                        <image src="../../images/train/testLogo.jpg"></image>
+                    </view>
+                    <view class="testLogoContent">
+                        <view class="testLogoText">黑桃大师</view>
+                        <view class="testLogoInfo">{{summary.secondPage.addWord2[0]}}</view>
+                    </view>
+                </view>
+                <view class="testNameContent">
+                    <image class="testNameBj" src="../../images/train/testNameBj.png"></image>
+                    <text class="testName">{{userName}}</text>
+                </view>
+                <view class="testResult">
+                    <view class="testResultStyle">打法风格</view>
+                    <view class="testResultContent" wx:for="{{summary.secondPage.style}}" wx:key="{{index}}">
+                        <view class="testTitle">
+                            <image class="testTitleImg" src="../../images/train/testTitleImg.png"></image>
+                            <view class="testTitleInfo">{{item.name}}</view>
+                        </view>
+                        <view class="testPro">
+                            <image class="testResultBj" src="../../images/train/testResultBj.png"></image>
+                            <image class="testResultIcon" src="../../images/train/testResultIcon.png" style="left:{{item.value}}%"></image>
+                            <text class="testResult1">{{item.type[0]}}</text>
+                            <text class="testResult2">{{item.type[1]}}</text>
+                            <text class="testResult3">{{item.type[2]}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="testConclusion">
+                    <view class="testLoophole">{{summary.secondPage.addWord3[0]}}</view>
+                    <view>{{summary.secondPage.addWord3[1]}}</view>
+                    <view>{{summary.secondPage.addWord3[2]}}</view>
+                </view>
+                <view class="testFooter">
+                    <view class="buttonImg">
+                        <button catchtap="produceImg" class="wx-dialog-btn" data-name="produceImg2">{{produceImg}}</button>
+                        <image src="../../images/icons/levelButton.png"></image>
+                    </view>
+                    <view class="buttonImg">
+                        <button catchtap="aaa" class="wx-dialog-btn" data-type="trainType" openType="share">{{confirmText}}</button>
+                        <image src="../../images/icons/levelButton.png"></image>
+                    </view>
+                    <view class="ewmImg">
+                        <image class="ewm" src="{{serverImg.ewm2}}"></image>
+                        <view class="ewmTop">黑桃大师</view>
+                        <view class="ewmInfo"> 扑克个性化培训AI</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="summaryContent3" hidden="{{animationIndex==3?false:true}}">
+            <view class="summary">
+                <view class="footTitle3">
+                    <view class="ability">综合测评报告</view>
+                    <text class="titleInfo" decode="{{true}}">
+                        {{summary.thirdPage.totalInfo}}
+                    </text>
+                </view>
+                <view class="testTop">
+                    <view class="summaryPerfect">
+                        <image src="../../images/train/summaryPerfect.png"></image>
+                    </view>
+                    <view class="baoGao">
+                        <view>哪有什么天生如此，</view>
+                        <view>只是我们天天坚持。</view>
+                    </view>
+                </view>
+                <view class="testFooter">
+                    <view class="buttonImg">
+                        <button catchtap="summaryClose" class="wx-dialog-btn" data-name="produceImg2">{{summary.thirdPage.quitButtonName}}</button>
+                        <image src="../../images/icons/buttonSF.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="cursor">
+            <view class="{{animationIndex==1?'cursorItem1':''}} cursorItem"></view>
+            <view class="{{animationIndex==2?'cursorItem1':''}} cursorItem"></view>
+            <view class="{{animationIndex==3?'cursorItem1':''}} cursorItem"></view>
+        </view>
+    </view>
+    <canvas canvasId="produceImg" style="width: 375px;height: 667px;position:fixed;top:9999px"></canvas>
+    <canvas canvasId="produceImg2" style="width: 375px;height: 667px;position:fixed;top:9999px;"></canvas>
+</view>

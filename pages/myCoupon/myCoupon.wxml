@@ -1,0 +1,27 @@
+<import src="../../template/template.wxml"></import>
+<header bind:back="back" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="我的订单"></header>
+<view bindtap="itemClick">
+    <template is="noData" data="{{name:'您暂时没有可以使用的优惠券',height:scrollHeight,dataHidden:dataHidden,imgSrc:'../../images/icons/noData3.png'}}"></template>
+</view>
+<template is="serviceCustomer" data="{{userInfo:userInfo}}"></template>
+<scroll-view bindscrolltolower="scrollTop" bindscrolltoupper="scrollBottom" enableBackToTop="{{true}}" lowerThreshold="5" scrollY="{{true}}" style="height:{{scrollHeight}}px;" upperThreshold="1">
+    <view class="itemContent" wx:for="{{lists}}" wx:key="index">
+        <view class="itemLeft {{item.isEnd?'overdueBgColor':''}}">
+            <view class="money">
+                <text class="moneyIcon">￥</text>
+                <text class="moneyNumber">{{item.couponNumber}}</text>
+            </view>
+            <text class="coupon">优惠券</text>
+        </view>
+        <view class="itemRight">
+            <view class="left">
+                <view class="name {{item.isEnd?'overdueColor':''}}">{{item.couponName}}</view>
+                <view class="time" wx:if="{{!item.isEnd}}">{{item.endTimeDisPlay}}到期</view>
+            </view>
+            <view class="right">
+                <text bindtap="goUse" class="goUse" wx:if="{{!item.isEnd}}">去使用</text>
+                <image class="overdue" src="../../images/mine/overdue.png" wx:if="{{item.isEnd}}"></image>
+            </view>
+        </view>
+    </view>
+</scroll-view>

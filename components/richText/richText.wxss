@@ -1,0 +1,10 @@
+.underline {
+    border-bottom: 2rpx solid #0bb20c;
+}
+
+.copy {
+    background: #F8B11D;
+    display: inline-block;
+    padding: 0 10rpx;
+    border-radius: 10rpx;
+}

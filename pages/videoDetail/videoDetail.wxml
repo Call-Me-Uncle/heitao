@@ -1,0 +1,40 @@
+<import src="../../template/template.wxml"></import>
+<header bind:back="back" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="教学视频"></header>
+<video controls autoplay="true" bindended="closeVideo" bindfullscreenchange="fullScreen" bindtimeupdate="timeUpdate" class="{{videoShow?'show':'hide'}}" id="myVideo" src="{{videoSrc}}" style="top:{{50+statusBarHeight}}px"></video>
+<template is="videoDialog" data="{{videoDialog:videoDialog}}"></template>
+<dialog bgColor="#fff" bind:cancelDialog="cancelIntroduction" bind:confirmEvent="clickMall" cancelText="" confirmText="前往商城" content="{{videoVip}}" id="Introduction" richText="true" title=""></dialog>
+<mallDialog bind:clickItem="mallPay" bind:mallBack="mallBack" mallInfo="{{mallInfo}}" mallShow="{{mallShow}}" submitPay="{{submitPay}}"></mallDialog>
+<scroll-view enableBackToTop="{{true}}" lowerThreshold="5" scrollY="{{true}}" style="height:{{scrollHeight}}px;" upperThreshold="1">
+    <view class="main">
+        <view class="top">
+            <image alt="" class="topImg" mode="widthFix" src="{{detailData.videoGroup.mainImageUrl}}"></image>
+            <view class="topTitle">{{detailData.videoGroup.groupTitle}}</view>
+            <view class="topInfo">
+                {{detailData.videoGroup.groupIntro}}
+            </view>
+        </view>
+        <view class="table">
+            <view bindtap="clickTable" data-active="1">
+                <text class="{{active==1?'active':''}}">介绍</text>
+            </view>
+            <view bindtap="clickTable" data-active="2">
+                <text class="{{active==2?'active':''}}">目录</text>
+            </view>
+        </view>
+        <view class="detail {{active==2?'detail1':''}}">
+            <image alt="" class="detailImg" hidden="{{active==1?false:true}}" mode="widthFix" src="{{ImageUrlItem}}" wx:for="{{detailData.videoGroup.introImageUrlArray}}" wx:for-item="ImageUrlItem" wx:key="index"></image>
+            <view class="list" hidden="{{active==2?false:true}}">
+                <view bindtap="play" class="listItem" data-id="{{catalog.id}}" data-type="{{catalog.playPermission}}" wx:for="{{detailData.list}}" wx:for-item="catalog" wx:key="index">
+                    <view class="playImg">
+                        <image alt="" src="../../images/icons/play.png"></image>
+                    </view>
+                    <view class="titleContent">
+                        <text class="text1">{{catalog.videoTitle}}</text>
+                        <text class="text2">{{catalog.videoIntro}}</text>
+                        <text class="text3" space="ensp">{{catalog.timeRange}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

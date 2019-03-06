@@ -1,0 +1,32 @@
+<remark cancelText="" confirmText="" headImg="{{headImageData.headImage?headImageData.headImage:defaultHeadImageUrl}}" headImgHidden="{{false}}" iconHide="true" id="{{'remark'+headImageData.uuid}}" title="{{headImageData.name}}"></remark>
+<view class="headImg {{isRight?'headImgRight':'headImgLeft'}} {{headImageData.initial_stack==0?'allinBorder':headImageData.actionLists.border?'headImageBorder':''}}">
+    <view class="nick">
+    {{headImageData.uuid==3?defaultUserInfo.userName:headImageData.name}}
+  </view>
+    <view class="bubble {{glodTop?'bubbleTop':''}}" hidden="{{headImageData.action=='FOLD'?false:headImageData.actionLists.bubble}}" style="background:{{headImageData.actionLists.bubbleBg}}">
+        <text>{{headImageData.actionLists.actions}}</text>
+    </view>
+    <view class="{{glodTop?'glodTop':''}} glod" hidden="{{headImageData.paidCount>0?false:true}}">
+        <text>{{headImageData.paidCount}}</text>
+        <image class="glodImg" src="../../images/train/chip.png"></image>
+        <image class="potChip {{headImageData.potChipAction}}" src="../../images/train/chip.png"></image>
+    </view>
+    <view bindtap="clickImg" class="imgContainer" data-info="{{headImageData.detailImage}}" data-remark="{{'remark'+headImageData.uuid}}">
+        <view class="imgContainerItem">
+            <image class="img" src="{{headImageData.uuid==3?defaultUserInfo.avatarUrl:headImageData.headImage?headImageData.headImage:defaultHeadImageUrl}}"></image>
+            <view class="imgOver" hidden="{{!headImageData.actionLists.imgOver?true:false}}"></view>
+        </view>
+    </view>
+    <view class="Cards" hidden="{{headImageData.uuid==3?true:!headImageData.CardsHidden}}">
+        <image class="card" src="../../images/puke/{{item}}.png" wx:for="{{headImageData.hole_card}}" wx:key="index"></image>
+    </view>
+    <view class="backContainer">
+        <image class="back {{headImageData.backClassF}} {{headImageData.actionLists.action=='FOLD'?'animate'+headImageData.uuid:''}} first" hidden="{{headImageData.uuid==3?true:!headImageData.backHiddenF}}" src="../../images/puke/back.png"></image>
+        <image class="back {{headImageData.backClassS}} {{headImageData.actionLists.action=='FOLD'?'animate'+headImageData.uuid:''}}" hidden="{{headImageData.uuid==3?true:!headImageData.backHiddenS}}" src="../../images/puke/back.png"></image>
+    </view>
+    <view class="banker {{glodTop?'bankerTop':''}}">
+        <text class="glodNumber">{{headImageData.initial_stack}}</text>
+        <image class="chipImg {{headImageData.actionLists.chipAction}}" src="../../images/train/chip.png"></image>
+        <image class="bankerImg {{glodTop?'bankerTop':''}}" hidden="{{dealer_btn==headImageData.uuid?false:true}}" src="../../images/train/banker.png"></image>
+    </view>
+</view>

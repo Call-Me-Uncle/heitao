@@ -1,0 +1,59 @@
+<clickDialog bind:dialogNouns="dialogNouns" id="clickDialog" title="{{clickDialogTitle}}"></clickDialog>
+<view class="wx_dialog_container" hidden="{{!isShow}}">
+    <view catchtap="_cancelDialog" class="wx-mask {{contentHidden?'':'wx-mask1'}}"></view>
+    <view class="wx-dialog {{contentHidden?'':'wx-dialog1'}}">
+        <image class="dian1" hidden="{{!contentHidden}}" src="../../images/icons/dian1.png"></image>
+        <image class="dian2" hidden="{{!contentHidden}}" src="../../images/icons/dian1.png"></image>
+        <view class="{{title==''?'wx-dialog-title0':'wx-dialog-title1'}}" hidden="{{!contentHidden}}">{{title}}</view>
+        <scroll-view class="wx-dialog-content" hidden="{{!contentHidden}}" scrollY="{{true}}" style="color:{{contentColor}};text-align: left;">
+            <view hidden="{{richText}}" style="text-align: left;">
+                <richText bind:clickNouns="clickNouns" hidden="{{richText}}" textValue="{{textValue}}"></richText>
+            </view>
+            <view class="isContent" hidden="{{!richText}}">
+                <view class="{{confirmText=='前往商城'?'dialogMall':''}}" hidden="{{content==''?true:false}}">
+                   {{content}}
+                  <image class="mallCoupon" mode="widthFix" src="{{couponImgUrl}}" wx:if="{{confirmText=='前往商城'&&couponImgUrl!=''}}"></image>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="contentHidden" hidden="{{contentHidden}}">
+            <image class="leftTop" src="../../images/icons/leftTop.png"></image>
+            <view class="contentHiddenTitle" hidden="{{contentHidden}}">{{title}}</view>
+            <image class="gift" src="../../images/icons/gift.png"></image>
+            <view catchtap="_clickItem" class="weui-cell" data-index="1">
+                <view class="weui-cell__bd">
+                    <view class="title">我会玩</view>
+                    <view class="contentInfo">玩过5次（或100手）以上</view>
+                </view>
+                <image class="ICan" src="../../images/icons/ICan.png"></image>
+            </view>
+            <view catchtap="_clickItem" class="weui-cell" data-index="2">
+                <view class="weui-cell__bd">
+                    <view class="title">一般般</view>
+                    <view class="contentInfo">熟悉扑克规则，但玩过的经验少于5次（或100手）</view>
+                </view>
+                <image class="ICan" src="../../images/icons/ICan.png"></image>
+            </view>
+            <view catchtap="_clickItem" class="weui-cell" data-index="3">
+                <view class="weui-cell__bd">
+                    <view class="title">完全不会玩</view>
+                    <view class="contentInfo">规则都不熟悉</view>
+                </view>
+                <image class="ICan" src="../../images/icons/ICan.png"></image>
+            </view>
+            <image class="dDown" src="../../images/icons/dDown.png"></image>
+        </view>
+        <view class="wx-dialog-footer wx-dialog-position">
+            <view catchtap="_cancelEvent" class="{{cancelText!=''&&confirmText!=''?'wx-dialog-btn2':'wx-dialog-btn1'}}" wx:if="{{cancelText!=''}}">
+                <text>{{cancelText}}</text>
+                <image class="button" src="../../images/icons/button.png"></image>
+            </view>
+            <view catchtap="_confirmEvent" class="{{cancelText!=''&&confirmText!=''?'wx-dialog-btn2':'wx-dialog-btn1'}}" wx:if="{{confirmText!=''}}">
+                <text>{{confirmText}}</text>
+                <image class="button" src="../../images/icons/button.png"></image>
+            </view>
+        </view>
+        <image class="dian3" hidden="{{!contentHidden}}" src="../../images/icons/dian1.png"></image>
+        <image class="dian4" hidden="{{!contentHidden}}" src="../../images/icons/dian1.png"></image>
+    </view>
+</view>

@@ -1,0 +1,896 @@
+@import "../../template/template.wxss";
+
+page {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#0e473e),color-stop(50%,#2fc69d),color-stop(100%,#0e473e));
+    background: linear-gradient(to bottom,#0e473e 0%,#2fc69d 50%,#0e473e 100%);
+    height: 100%;
+}
+
+.practiceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.vacancyContainer {
+    height: 200rpx;
+    width: 110rpx;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.vacancy {
+    display: inline-block;
+    width: 88rpx;
+    height: 88rpx;
+    margin-top: 40rpx;
+    border: 1px dashed #eee;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.vacancy text {
+    line-height: 88rpx;
+    color: #eee;
+    font-size: 24rpx;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 60rpx;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 10rpx;
+    position: relative;
+}
+
+.returnContent {
+    padding-top: 80rpx;
+    padding-left: 36rpx;
+    width: 95rpx;
+    height: 70px;
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+}
+
+.menu {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.menuDetailContent {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 201;
+}
+
+.menuDetail {
+    width: 260rpx;
+    background: #000;
+    position: relative;
+    border-radius: 10rpx;
+    z-index: 100;
+    left: 90rpx;
+    top: 80rpx;
+    overflow: hidden;
+}
+
+.menuAnimate1 {
+    -webkit-animation: menuAnimate1 0.1s linear;
+}
+
+@-webkit-keyframes menuAnimate1 {
+    from {
+        height: 200rpx;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+@keyframes menuAnimate1 {
+    from {
+        height: 200rpx;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+.menuAnimate2 {
+    -webkit-animation: menuAnimate2 0.1s linear;
+}
+
+@-webkit-keyframes menuAnimate2 {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 200rpx;
+    }
+}
+
+@keyframes menuAnimate2 {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 200rpx;
+    }
+}
+
+.menuDetail view {
+    padding-left: 25rpx;
+    height: 80rpx;
+}
+
+.menuDetail text {
+    font-size: 30rpx;
+    line-height: 80rpx;
+    color: #fff;
+}
+
+.menuImg {
+    width: 40rpx;
+    height: 40rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25rpx;
+}
+
+.isList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poolBottom {
+    width: 500rpx;
+    height: 300rpx;
+    position: absolute;
+    top: 35rpx;
+    left: 125rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 285rpx;
+    height: 78rpx;
+    margin-bottom: 30rpx;
+}
+
+.AI {
+    font: 35rpx/45rpx '黑体';
+    letter-spacing: 5rpx;
+    margin-bottom: 35rpx;
+    color: #fff;
+    opacity: 0.5;
+    margin-top: 35rpx;
+}
+
+.AI text {
+    letter-spacing: 0;
+    margin-left: -20rpx;
+}
+
+.poolBottom .chipContent {
+    border-radius: 100rpx;
+    background-color: rgba(0,0,0,0.2);
+    height: 44rpx;
+    width: 160rpx;
+}
+
+.poolBottom .chipImg {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 3rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.poolBottom .chipNumber {
+    font-size: 34rpx;
+    line-height: 36rpx;
+    color: #11a96e;
+}
+
+.poolBottom .isChip {
+    font-size: 32rpx;
+    color: rgba(0,0,0,0.4);
+}
+
+.poolBottom .flop {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #248b71;
+}
+
+.ratio {
+    font-size: 24rpx;
+    color: #ccc;
+    position: fixed;
+    bottom: 20rpx;
+    left: 30rpx;
+}
+
+.cards {
+    width: 420rpx;
+    height: 110rpx;
+    position: absolute;
+    top: 95rpx;
+    left: 165rpx;
+    text-align: center;
+}
+
+.amountDegree {
+    position: relative;
+    top: 25rpx;
+}
+
+.card {
+    width: 74rpx;
+    height: 99rpx;
+    box-shadow: 3rpx 3rpx 2rpx #000;
+    border-radius: 4rpx;
+}
+
+.cardImg {
+    width: 74rpx;
+    height: 99rpx;
+    margin: 0 5rpx;
+}
+
+.cards .cardContent {
+    height: 100rpx;
+    display: flex;
+    margin-bottom: 35rpx;
+}
+
+.info {
+    font-size: 28rpx;
+    height: 40rpx;
+    color: rgba(0,0,0,0.4);
+}
+
+.currentHhNum {
+    font-size: 17rpx;
+    position: relative;
+    top: -2rpx;
+    left: 4rpx;
+}
+
+.infoContent {
+    width: 750rpx;
+}
+
+.annotationContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 166rpx;
+}
+
+.infoContent .annotation {
+    position: relative;
+    color: #fff;
+    width: 82rpx;
+}
+
+.infoContent .annotation .annotationTop {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    font-size: 32rpx;
+    z-index: 10;
+    word-break: normal;
+}
+
+.infoContent .annotation .annotationBottom {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    font-size: 24rpx;
+    z-index: 10;
+}
+
+.infoContent .multiple {
+    width: 85rpx;
+    height: 65rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 33rpx;
+    border-radius: 100%;
+    color: #fff;
+    position: relative;
+    background: radial-gradient(circle at center,rgb(39,134,130) 0%,rgb(38,155,151) 56%,rgb(37,176,171) 100%);
+    box-shadow: 0px 2px 10px #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10rpx 0;
+}
+
+.raiseBgColor {
+    background: radial-gradient(circle at center,rgb(81,81,81) 0%,rgb(110,109,109) 56%,rgb(138,137,137) 100%)!important;
+}
+
+.firstTop {
+    top: -45rpx;
+}
+
+.sencondTop {
+    top: -30rpx;
+}
+
+.operation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 100rpx;
+    font-size: 24rpx;
+    height: 150rpx;
+}
+
+.operationItem {
+    width: 120rpx;
+    height: 120rpx;
+    position: relative;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.actionsContent {
+    width: 100rpx;
+    height: 100rpx;
+    position: relative;
+    text-align: center;
+    border-radius: 100%;
+    margin-left: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.itemContentFold0 {
+    background: radial-gradient(circle at center,#ae3232 0%,#d74343 56%,#ff5353 100%);
+    box-shadow: 0 0 10rpx #000;
+}
+
+.itemContentFold1 {
+    background: radial-gradient(circle at center,rgb(81,81,81) 0%,rgb(110,109,109) 56%,rgb(138,137,137) 100%);
+    box-shadow: 0 0 10rpx #000;
+}
+
+.itemContentCall {
+    background: radial-gradient(circle at center,#1f8d17 0%,#27ab25 56%,#2fc833 100%);
+    box-shadow: 0 0 10rpx #000;
+}
+
+.itemContentAdd {
+    background: radial-gradient(circle at center,#cc8e2f 0%,#e3a53f 56%,#ffc153 100%);
+    box-shadow: 0 0 10rpx #000;
+}
+
+.operationItem .flod {
+    color: #fff;
+    position: relative;
+    top: -10rpx;
+}
+
+.isFold {
+    color: #9b9b9b;
+    position: relative;
+    top: -10rpx;
+}
+
+.operationItem .free {
+    color: #fff;
+    position: relative;
+    top: -10rpx;
+}
+
+.operationItem .refuel {
+    color: #fff;
+    position: relative;
+    top: -15rpx;
+}
+
+.operationItem .watch {
+    color: #fff;
+    position: relative;
+    top: -10rpx;
+}
+
+.operationImg {
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 25rpx;
+}
+
+.operationTop {
+    top: -30rpx;
+}
+
+.myCard {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.book {
+    width: 54rpx;
+    height: 70rpx;
+}
+
+.bookContent {
+    position: absolute;
+    bottom: 40rpx;
+    right: 40rpx;
+    width: 54rpx;
+    height: 70rpx;
+}
+
+.bookContent .image2 {
+    width: 83rpx;
+    height: 85rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 30rpx;
+    transform: rotate3d(0,1,0,180deg);
+}
+
+.mallImg {
+    position: fixed;
+    z-index: 500;
+    bottom: 120rpx;
+    right: 30rpx;
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.mallImg image {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+slider {
+    position: fixed;
+    top: 0;
+    left: 200rpx;
+}
+
+isSlider {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    z-index: 101;
+    height: 100%;
+}
+
+.add {
+    width: 100rpx;
+    height: 100rpx;
+    color: #fff;
+    border-radius: 100%;
+    background: radial-gradient(circle at center,rgb(2,64,57),rgb(13,102,84),rgb(120,207,188));
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    position: absolute;
+    bottom: 50rpx;
+    left: 10rpx;
+    z-index: 200;
+}
+
+.heroChip {
+    position: absolute;
+    top: 45rpx;
+    left: 55px;
+    display: flex;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20rpx;
+    min-width: 65rpx;
+    padding: 0 5rpx;
+    height: 30rpx;
+}
+
+.heroChip image {
+    width: 26rpx;
+    height: 26rpx;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 5rpx;
+}
+
+.heroChip text {
+    font-size: 24rpx;
+    color: #55c949;
+    line-height: 30rpx;
+}
+
+.victory {
+    position: absolute;
+    bottom: 300rpx;
+    width: 750rpx;
+    text-align: center;
+    z-index: 200;
+}
+
+.victory1 {
+    position: absolute;
+    top: 127rpx;
+    width: 750rpx;
+    text-align: center;
+    z-index: 200;
+}
+
+.victory .win {
+    width: 602rpx;
+    height: 404rpx;
+}
+
+.victory .lose {
+    width: 400rpx;
+    height: 129rpx;
+    margin-bottom: 115rpx;
+}
+
+.victory1 .perfect {
+    width: 675rpx;
+    height: 750rpx;
+    background: rgba(15,18,45,0.8);
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin-left: 37rpx;
+}
+
+.victory1 .perfect .perfectTop {
+    width: 675rpx;
+    height: 75rpx;
+    background: rgba(40,50,103,0.8);
+    text-align: right;
+}
+
+.victory1 .perfectImg {
+    width: 375rpx;
+    height: 330rpx;
+}
+
+.pCenter {
+    width: 100%;
+    height: 84rpx;
+    position: relative;
+    margin: 45rpx 0;
+    margin-top: 35rpx;
+}
+
+.pCenter button {
+    width: 498rpx;
+    height: 84rpx;
+    position: absolute;
+    top: 0;
+    left: 88rpx;
+    z-index: 300;
+}
+
+.pCenter .showOff {
+    width: 498rpx;
+    height: 84rpx;
+}
+
+.perfectFooter {
+    padding: 20rpx;
+    text-align: center;
+}
+
+.pTop {
+    display: flex;
+}
+
+.pTop .pText {
+    text-align: left;
+    padding-top: 190rpx;
+}
+
+.pTop .pText .pText1 {
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.pBottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pImgContent {
+    width: 110rpx;
+    height: 150rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pImgContent text {
+    font-size: 24rpx;
+    color: #fffefe;
+}
+
+.pImgContent .pImg1 {
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.pImgContent .pImg2 {
+    width: 54rpx;
+    height: 54rpx;
+    position: absolute;
+    left: 28rpx;
+    top: 28rpx;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    padding-top: 300rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.5);
+}
+
+.body-view {
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate(-90deg);
+}
+
+slider {
+    width: 750rpx;
+    height: 50rpx;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.raiseColor {
+    color: #9b9b9b;
+}
+
+.perfectShow {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    margin: 0 auto;
+}
+
+.perfectShow .perfectText {
+    position: absolute;
+    width: 650rpx;
+    left: 50rpx;
+    color: #ccc;
+    font-size: 36rpx;
+    text-align: center;
+    bottom: 240rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 20rpx;
+    padding: 30rpx 0;
+}
+
+#tips {
+    position: fixed;
+    width: 400rpx;
+    height: 100rpx;
+    z-index: 1000;
+    bottom: 370rpx;
+    left: 185rpx;
+}
+
+#tips image {
+    position: absolute;
+    width: 400rpx;
+    height: 100rpx;
+    top: 0;
+    left: 0;
+}
+
+#tips text {
+    position: absolute;
+    width: 400rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+
+.follow {
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 508rpx;
+    height: 656rpx;
+}
+
+.tipsInfo {
+    color: #fff;
+    position: absolute;
+    bottom: 320rpx;
+    width: 750rpx;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.overView {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.loadingButton {
+    width: 180rpx;
+    height: 60rpx;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    line-height: 60rpx;
+    padding: 0;
+    color: #eee;
+    border-radius: 10rpx;
+    font-size: 22rpx;
+}
+
+.loading {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.perfectActionImg {
+    width: 65rpx;
+    height: 65rpx;
+    margin-top: 8rpx;
+    margin-right: 15rpx;
+}
+
+@-webkit-keyframes perfectAction {
+    from {
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        top: 95%;
+        left: 95%;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes perfectAction {
+    from {
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        top: 95%;
+        left: 95%;
+        width: 0;
+        height: 0;
+    }
+}
+
+.perfectAction {
+    animation: perfectAction 0.5s linear;
+}
+
+.guide {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5001;
+}
+
+.signOut {
+    position: absolute;
+    top: 400rpx;
+    left: 90rpx;
+    background: #000;
+    width: 235rpx;
+    padding-left: 25rpx;
+    height: 80rpx;
+}
+
+.signOut text {
+    color: #fff;
+    font-size: 30rpx;
+    line-height: 80rpx;
+}
+
+.guideInfo {
+    width: 600rpx;
+    height: 400rpx;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.guideInfo view {
+    width: 400rpx;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    position: absolute;
+    top: 400rpx;
+    left: 100rpx;
+}
+
+.guideImg {
+    width: 600rpx;
+    height: 400rpx;
+}
+
+.headImg {
+    position: absolute;
+    top: 95rpx;
+    left: 150rpx;
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.headImg .image1 {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.headImg .image2 {
+    width: 83rpx;
+    height: 85rpx;
+    position: absolute;
+    top: 50rpx;
+    left: 35rpx;
+}
+
+.bankerImg {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: -20rpx;
+    right: -40rpx;
+}

@@ -1,0 +1,14 @@
+{
+    "usingComponents": {
+        "headImg": "../../components/headImg/headImg",
+        "dialog": "../../components/dialog/dialog",
+        "dialogModel": "../../components/dialogModel/dialogModel",
+        "remark": "../../components/remark/remark",
+        "isSlider": "../../components/isSlider/isSlider",
+        "iptOpinion": "../../components/iptOpinion/iptOpinion",
+        "mallDialog": "../../components/mallDialog/mallDialog",
+        "summary": "../../components/summary/summary"
+    },
+    "navigationBarTitleText": "训练场",
+    "disableScroll": true
+}

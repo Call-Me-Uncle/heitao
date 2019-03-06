@@ -1,0 +1,339 @@
+.wx-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.remarkContent {
+    position: fixed;
+    z-index: 4000;
+    width: 80%;
+    max-width: 600rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.wx-dialog {
+    width: 100%;
+    text-align: center;
+    border-radius: 6rpx;
+    overflow: hidden;
+    background: linear-gradient(135deg,transparent 10px,rgba(12,99,82,0.9) 0) top left,linear-gradient(-135deg,transparent 10px,rgba(12,99,82,0.9) 0) top right,linear-gradient(-45deg,transparent 10px,rgba(12,99,82,0.9) 0) bottom right,linear-gradient(45deg,transparent 10px,rgba(12,99,82,0.9) 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+}
+
+.wx-dialog1 {
+    top: 340rpx;
+    transform: translate(-50%,0);
+}
+
+.wx-dialog2 {
+    top: 180rpx;
+    transform: translate(-50%,0);
+}
+
+.wx-dialog-title {
+    font-size: 36rpx;
+    padding: 30rpx 30rpx 10rpx;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.wx-dialog-content {
+    width: 540rpx;
+    padding: 30rpx;
+    min-height: 80rpx;
+    max-height: 600rpx;
+    font-size: 30rpx;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: left;
+}
+
+.wx-dialog-footer {
+    display: flex;
+    align-items: center;
+    line-height: 90rpx;
+    font-size: 34rpx;
+    padding: 15rpx 0 30rpx 0;
+    justify-content: space-around;
+}
+
+.wx-dialog-footer button {
+    color: #fff;
+    font-size: 24rpx;
+    padding: 0 40rpx;
+}
+
+.wx-dialog-footer button::after {
+    border: 0;
+}
+
+.wx-dialog-position {
+    position: relative;
+}
+
+.feedbackContainer .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 30rpx;
+}
+
+.primary {
+    text-align: left;
+}
+
+.primary button {
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 20rpx;
+}
+
+.feedbackContainer .content .case {
+    width: 200rpx;
+    height: 60rpx;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedbackContainer .content .case view {
+    width: 68rpx;
+}
+
+.feedbackContainer .content .case image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.feedbackContainer .content .case text {
+    font-size: 30rpx;
+    position: relative;
+    top: -10rpx;
+    margin-left: 10rpx;
+}
+
+.imgContainer {
+    height: 86rpx;
+    width: 86rpx;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.img {
+    width: 86rpx;
+    height: 86rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+
+@-webkit-keyframes animateHidden {
+    from {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+    }
+
+    to {
+        top: 95%;
+        left: 95%;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes animateHidden {
+    from {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+    }
+
+    to {
+        top: 95%;
+        left: 95%;
+        width: 0;
+        height: 0;
+    }
+}
+
+.animateHidden {
+    animation: animateHidden 0.5s linear;
+}
+
+.upDown {
+    width: 122rpx;
+    height: 68rpx;
+    position: absolute;
+    right: 10rpx;
+    top: 17rpx;
+}
+
+.upDown image {
+    width: 122rpx;
+    height: 68rpx;
+}
+
+button {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    box-sizing: border-box;
+    font-size: 34rpx;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2.55555556;
+    border-radius: 0;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: #000000;
+    background-color: #efeff4;
+}
+
+.up {
+    width: 230rpx;
+    height: 27rpx;
+    position: absolute;
+    top: 0;
+}
+
+.down {
+    width: 230rpx;
+    height: 27rpx;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.dian1 {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 15rpx;
+    left: 15rpx;
+}
+
+.dian2 {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 15rpx;
+    right: 15rpx;
+    transform: rotate(90deg);
+}
+
+.dian3 {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    bottom: 15rpx;
+    right: 15rpx;
+}
+
+.dian4 {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    bottom: 15rpx;
+    left: 15rpx;
+    transform: rotate(90deg);
+}
+
+.isContent {
+    color: #fff;
+}
+
+.btuContent {
+    position: relative;
+}
+
+.btuContent image {
+    width: 100%;
+    height: 60rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btuContent button {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.remakeImg {
+    width: 400rpx;
+    height: 278rpx;
+    position: absolute;
+    top: -278rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.guide {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.guideInfo {
+    width: 600rpx;
+    height: 400rpx;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+
+.guideImg {
+    width: 600rpx;
+    height: 400rpx;
+}
+
+.book {
+    width: 54rpx;
+    height: 70rpx;
+}
+
+.bookContent {
+    position: absolute;
+    bottom: 40rpx;
+    right: 40rpx;
+    width: 54rpx;
+    height: 70rpx;
+}
+
+.bookContent .image2 {
+    width: 83rpx;
+    height: 85rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 30rpx;
+    transform: rotate3d(0,1,0,180deg);
+}

@@ -1,0 +1,28 @@
+<import src="../../template/template.wxml"></import>
+<header id="head" imgHidden="{{true}}" statusBarHeight="{{statusBarHeight}}" title="教学视频"></header>
+<template is="videoDialog1" data="{{videoDialog:videoDialog}}"></template>
+<video controls autoplay="true" bindended="videoEnd" bindtimeupdate="timeUpdate" hidden="{{!videoShow}}" id="myVideo" src="{{videoSrc}}" style="top: {{50+statusBarHeight}}px;"></video>
+<scroll-view enableBackToTop="{{true}}" lowerThreshold="5" scrollY="{{true}}" style="height:{{scrollHeight}}px;" upperThreshold="1">
+    <image alt="" class="topImg" mode="widthFix" src="https://www.heitaodashi.cn/image/mini_app/video_image/video_price.jpg"></image>
+    <view class="main" wx:for="{{videoData}}" wx:for-item="catalog" wx:key="index">
+        <view class="titleTop">
+            <view class="titleName">{{catalog.catalogName}}</view>
+        </view>
+        <view class="lists">
+            <view bindtap="videoDetail" class="item" data-id="{{list.id}}" wx:if="{{catalog.catalogType==1}}" wx:for="{{catalog.videoGroupList}}" wx:for-item="list" wx:key="index">
+                <image alt="" src="{{list.titleImageUrl}}"></image>
+                <view class="title">
+                    <view class="titleName">{{list.groupTitle}}</view>
+                    <view class="titleInfo">{{list.groupIntro}}</view>
+                </view>
+            </view>
+            <view bindtap="play" class="item" data-id="{{list.id}}" data-type="{{list.playPermission}}" wx:if="{{catalog.catalogType==0}}" wx:for="{{catalog.videoInfoList}}" wx:for-item="list" wx:key="index">
+                <view class="title">
+                    <view class="titleName">{{list.videoTitle}}</view>
+                    <view class="titleInfo">{{list.videoIntro}}</view>
+                </view>
+                <image alt="" src="{{list.videoTitleImageUrl}}"></image>
+            </view>
+        </view>
+    </view>
+</scroll-view>

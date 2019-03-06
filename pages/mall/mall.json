@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "mallDialog": "../../components/mallDialog/mallDialog"
+    }
+}

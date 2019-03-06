@@ -1,0 +1,61 @@
+<clickDialog bind:dialogNouns="dialogNouns" id="clickDialog" title="{{clickDialogTitle}}"></clickDialog>
+<view class="wx_dialog_container remark" hidden="{{!isShow}}">
+    <view bindtap="closeHidden" class="wx-mask"></view>
+    <view class="remarkContent {{animateHidden}} {{title=='训练小结'?'wx-dialog1':''}} {{title=='牌局点评'?'wx-dialog2':''}}">
+        <image class="remakeImg" hidden="{{title=='训练小结'?false:true}}" src="{{remakeImg}}" wx:if="{{remakeImg}}"></image>
+        <view class="wx-dialog">
+            <image class="dian1" hidden="{{title=='牌局点评'?true:false}}" src="../../images/icons/dian1.png"></image>
+            <image class="dian2" hidden="{{title=='牌局点评'?true:false}}" src="../../images/icons/dian1.png"></image>
+            <view bindtap="closeHidden" class="upDown" hidden="{{iconHide}}">
+                <image src="{{title=='牌局点评'||title=='训练小结'?'../../images/train/upDown2.png':'../../images/train/upDown.png'}}"></image>
+            </view>
+            <view class="wx-dialog-title">
+                <view class="imgContainer" hidden="{{headImgHidden}}">
+                    <image class="img" src="{{headImg}}"></image>
+                </view>
+                <image class="up" hidden="{{title=='牌局点评'?true:false}}" src="../../images/train/up.png"></image>
+                <text>{{title}}</text>
+            </view>
+            <scroll-view class="wx-dialog-content" scrollY="{{true}}" style="color:{{contentColor}};">
+                <view style="text-align: left;">
+                    <richText bind:clickNouns="clickNouns" hidden="{{richText}}" textValue="{{textValue}}"></richText>
+                </view>
+                <view class="isContent">{{content}}</view>
+            </scroll-view>
+            <view class="feedbackContainer" hidden="{{opinion}}">
+                <view class="content">
+                    <view class="primary btuContent">
+                        <button catchtap="demonstration" size="mini" style="background:none;width:270rpx;"> 高手示范 </button>
+                        <image src="{{shiFanButton?'../../images/icons/buttonNSF.png':'../../images/icons/buttonSF.png'}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="wx-dialog-footer wx-dialog-position">
+                <view class="btuContent" hidden="{{trainType}}" wx:if="{{cancelText!=''}}">
+                    <button catchtap="_cancelEvent" class="wx-dialog-btn" style="background: none;background-size:100% 100%;background-repeat:no-repeat;">{{cancelText}}</button>
+                    <image src="{{cancelText=='高手示范'?'../../images/icons/button2.png':'../../images/icons/button.png'}}"></image>
+                </view>
+                <view class="btuContent" wx:if="{{centerText!=''}}">
+                    <button catchtap="_centerEvent" class="wx-dialog-btn" data-type="share" openType="share" style="background: none;background-size:100% 100%;background-repeat:no-repeat;">{{centerText}}</button>
+                    <image src="../../images/icons/button2.png"></image>
+                </view>
+                <view class="btuContent" wx:if="{{confirmText!=''}}">
+                    <button catchtap="_confirmEvent" class="wx-dialog-btn" style="background: none;background-size:100% 100%;background-repeat:no-repeat;">{{confirmText}}</button>
+                    <image src="../../images/icons/button.png"></image>
+                </view>
+            </view>
+            <image class="down" hidden="{{title=='牌局点评'?true:false}}" src="../../images/train/down.png"></image>
+            <image class="dian3" hidden="{{title=='牌局点评'?true:false}}" src="../../images/icons/dian1.png"></image>
+            <image class="dian4" hidden="{{title=='牌局点评'?true:false}}" src="../../images/icons/dian1.png"></image>
+        </view>
+    </view>
+</view>
+<view bindtap="guideShow" class="guide" hidden="{{guide}}">
+    <view class="guideInfo">
+        <image class="guideImg" src="{{guideImg}}" wx:if="{{!guide.show}}"></image>
+    </view>
+    <view class="bookContent">
+        <image class="book" src="../../images/train/book.png"></image>
+        <image class="image2" src="../../images/icons/hand.png"></image>
+    </view>
+</view>

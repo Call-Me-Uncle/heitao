@@ -1,0 +1,102 @@
+@import "../../template/template.wxss";
+
+scroll-view {
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+
+.itemContent {
+    background: #fff;
+    position: relative;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+    display: flex;
+}
+
+.itemLeft {
+    width: 185rpx;
+    height: 185rpx;
+    text-align: center;
+    color: #fff;
+    background: repeating-linear-gradient(145deg,rgb(241,165,116) 0,rgb(240,149,118) 62%,rgb(238,133,120) 100%);
+}
+
+.money {
+    position: relative;
+    top: 30rpx;
+}
+
+.moneyIcon {
+    font-size: 28rpx;
+}
+
+.moneyNumber {
+    font-size: 60rpx;
+}
+
+.coupon {
+    font-size: 26rpx;
+    margin-top: -20rpx;
+}
+
+.itemRight {
+    width: 475rpx;
+    height: 185rpx;
+    padding: 0 25rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemRight .left {
+    width: 295rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemRight .left .name {
+    font-size: 34rpx;
+    font-weight: 700;
+    color: #2c2c2c;
+    line-height: 70rpx;
+}
+
+.itemRight .left .time {
+    font-size: 24rpx;
+    color: #727272;
+    line-height: 50rpx;
+}
+
+.itemRight .right {
+    width: 135rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemRight .right .goUse {
+    width: 135rpx;
+    height: 55rpx;
+    text-align: center;
+    line-height: 55rpx;
+    color: #fff;
+    font-size: 24rpx;
+    display: inline-block;
+    border-radius: 10rpx;
+    background: repeating-linear-gradient(117deg,#ef8f50 0,#eb6354 100%);
+}
+
+.itemRight .right .overdue {
+    width: 125rpx;
+    height: 125rpx;
+}
+
+.itemRight .left .overdueColor {
+    color: #a5a5a5;
+}
+
+.overdueBgColor {
+    background: #a5a5a5;
+}

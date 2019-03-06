@@ -1,0 +1,59 @@
+<import src="../../template/template.wxml"></import>
+<header bind:back="back" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="黑桃大师"></header>
+<scroll-view bindscrolltolower="scrollTop" bindscrolltoupper="scrollBottom" enableBackToTop="{{true}}" lowerThreshold="5" scrollY="{{true}}" style="height:{{scrollHeight}}px;" upperThreshold="1">
+    <view bindtap="itemClick">
+        <template is="noData" data="{{name:name,height:scrollHeight,dataHidden:noData,imgSrc:'../../images/icons/noData1.png'}}"></template>
+    </view>
+    <view class="top">
+        <view bindtap="playAgain" class="itemContent" data-id="{{item.id}}" wx:for="{{lists}}" wx:key="index">
+            <view class="itemTopBorder">
+                <view class="itemCenter" wx:if="{{buttonType=='history'}}">
+                    <view class="dsd">
+                        <text>{{item.cnName}}</text>
+                        <text class="hisTime">{{item.typeInfo}}（{{item.degree}}）</text>
+                    </view>
+                    <view class="dsdTime">
+                        <text>桃子(-{{item.payCoin}})</text>
+                        <text class="hisTime">{{item.playTimeDisplay}}</text>
+                    </view>
+                    <view class="rightContent">
+                        <text class="money">
+                            <text class="scoreNumber">{{item.score}}</text>分</text>
+                        <image class="rightArrow" src="../../images/icons/rightArrow.png"></image>
+                    </view>
+                </view>
+                <view class="itemCenter" wx:if="{{buttonType=='share'}}">
+                    <view class="dsd">
+                        <text>{{item.cnName}}</text>
+                    </view>
+                    <view class="dsdTime">
+                        <text>{{item.playTimeDisplay}}</text>
+                    </view>
+                    <view class="rightContent">
+                        <text class="money">
+                            <text class="scoreNumber">{{item.score}}</text>分</text>
+                        <image class="rightArrow" src="../../images/icons/rightArrow.png"></image>
+                    </view>
+                </view>
+                <image class="lineImg" src="../../images/icons/line.png"></image>
+            </view>
+            <view class="PukeImg">
+                <image class="pukeItem1" src="../../images/puke/{{item.handCardList[0]}}.png"></image>
+                <image class="pukeItem2" src="../../images/puke/{{item.handCardList[1]}}.png"></image>
+            </view>
+        </view>
+        <view class="DownInfo" hidden="{{DownInfo}}">已经到底了，别再扯了</view>
+    </view>
+    <image class="bjImg" src="../../images/train/bj.jpg"></image>
+</scroll-view>
+<view class="historyTop" style="top:{{50+statusBarHeight}}px;">
+    <view bindtap="clickShare" class="historyTable {{buttonType=='share'?'clickStyle':'defaultStyle'}}">分享</view>
+    <view catchtap="clickHistory" class="historyTable {{buttonType=='history'?'clickStyle':'defaultStyle'}}">
+        近七天历史
+    </view>
+    <view class="historySelect {{animate}}">
+        <view bindtap="clickAll">全部</view>
+        <view bindtap="clickPerfect">完美</view>
+        <view bindtap="clickNoPerfect">不完美</view>
+    </view>
+</view>

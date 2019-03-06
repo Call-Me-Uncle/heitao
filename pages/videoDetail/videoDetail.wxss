@@ -1,0 +1,134 @@
+@import "../../template/template.wxss";
+
+.main .top {
+    background: #fff;
+    padding-bottom: 30rpx;
+}
+
+.main .top .topImg {
+    width: 100%;
+}
+
+.main .top .topTitle {
+    font-size: 34rpx;
+    font-weight: 700;
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.main .top .topInfo {
+    font-size: 30rpx;
+    color: #999;
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.main .table {
+    margin: 25rpx 0;
+    background: #fff;
+    display: flex;
+    height: 70rpx;
+    justify-content: space-between;
+}
+
+.main .table view {
+    height: 70rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.main .table view text {
+    font-size: 30rpx;
+    font-weight: 700;
+    border-bottom: 6rpx solid #fff;
+    display: inline-block;
+    line-height: 64rpx;
+    height: 64rpx;
+}
+
+.main .table view .active {
+    border-bottom: 6rpx solid #22ad72;
+    color: #22ad72;
+}
+
+.main .detail {
+    width: 750rpx;
+    background: #fff;
+}
+
+.main .detail1 {
+    width: 690rpx;
+    padding: 0 30rpx;
+    background: #fff;
+}
+
+.main .detail .detailImg {
+    width: 750rpx;
+}
+
+.main .detail .list {
+}
+
+.main .detail .list .listItem {
+    padding-top: 30rpx;
+    display: flex;
+}
+
+.main .detail .list .listItem .playImg {
+    width: 70rpx;
+}
+
+.main .detail .list .listItem .playImg image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.main .detail .list .listItem .titleContent {
+    padding-bottom: 25rpx;
+    border-bottom: 1px solid #f5f5f5;
+    width: 620rpx;
+}
+
+.main .detail .list .listItem .titleContent .text1 {
+    font-weight: 700;
+    font-size: 32rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main .detail .list .listItem .titleContent .text2 {
+    font-size: 28rpx;
+    color: #666;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main .detail .list .listItem .titleContent .text3 {
+    font-size: 26rpx;
+    color: #999;
+    display: block;
+    margin-top: 5rpx;
+}
+
+.show {
+    display: show;
+}
+
+.hide {
+    display: none;
+}
+
+#myVideo {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    height: 422rpx;
+}

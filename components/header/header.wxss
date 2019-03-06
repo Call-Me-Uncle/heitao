@@ -1,0 +1,44 @@
+.statusBarTitle {
+    height: 50px;
+    text-align: center;
+    font-size: 32rpx;
+}
+
+.statusBarTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 25rpx;
+    align-items: center;
+}
+
+.item {
+    height: 100rpx;
+    line-height: 100rpx;
+    min-width: 150rpx;
+}
+
+.item image {
+    width: 33rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+
+.item1 text {
+    vertical-align: middle;
+}
+
+.item1 {
+    text-align: left;
+    font-size: 30rpx;
+}
+
+.item2 {
+    text-align: center;
+    font-size: 36rpx;
+}
+
+.item3 {
+    text-align: right;
+    font-size: 30rpx;
+}

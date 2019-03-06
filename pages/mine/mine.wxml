@@ -1,0 +1,38 @@
+<import src="../../template/template.wxml"></import>
+<header statusBarHeight="{{statusBarHeight}}" title="黑桃大师"></header>
+<template is="serviceCustomer" data="{{userInfo:userInfo,contactImg:contactImg}}"></template>
+<scroll-view scrollY="{{true}}" style="height:{{scrollHeight}}px;">
+    <view style="height: 430rpx;overflow: hidden">
+        <view class="viewTop"></view>
+        <view class="mineInfo">
+            <view class="headImg">
+                <view>
+                    <image src="{{headImg}}"></image>
+                </view>
+            </view>
+            <view class="name">
+                <text>{{userName}}</text>
+            </view>
+            <view class="coin">
+                <view class="mallTaoZi">
+                    <image class="taoZi" src="../../images/mine/taoZi.png"></image>
+                    <image class="taoZi taoZi2" src="../../images/mine/taoZi.png"></image>
+                </view>
+                <view>{{coin}}</view>
+            </view>
+            <view class="member" wx:if="{{isMember==1}}">
+                <image src="../../images/mine/vip.png"></image>
+                <text>{{memberEndTimeDisPlay}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view bindtap="{{item.bindName}}" class="itemList" wx:for="{{itemLists}}" wx:key="{{index}}">
+            <view class="iconContent">
+                <image class="icon {{item.icon}}" src="../../images/mine/{{item.icon}}.png"></image>
+                <text class="iconText">{{item.name}}</text>
+            </view>
+            <image class="rightArrow" src="../../images/icons/rightArrow.png"></image>
+        </view>
+    </view>
+</scroll-view>

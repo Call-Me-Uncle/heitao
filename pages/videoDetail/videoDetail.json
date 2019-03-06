@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "dialog": "../../components/dialog/dialog",
+        "mallDialog": "../../components/mallDialog/mallDialog",
+        "header": "../../components/header/header"
+    }
+}

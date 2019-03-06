@@ -1,0 +1,44 @@
+<block wx:if="{{mallShow}}">
+    <import src="../../template/template.wxml"></import>
+    <view class="mallContent">
+        <template is="serviceCustomer" data="{{userInfo:userInfo,contactImg:contactImg,serviceBottom:ballBottom,serviceRight:ballRight}}"></template>
+        <header bind:back="mallBack" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="商城"></header>
+        <scroll-view class="mallContainer" scrollY="{{true}}" style="height:{{scrollHeight}}px;">
+            <view class="couponNotice" wx:if="{{mallInfo.couponNoticeShow}}">
+                <image src="../../images/mine/vip.png"></image>
+                <text>{{mallInfo.couponNoticeShow}}</text>
+            </view>
+            <view class="mallTop">
+                <view bindtap="clickList" class="{{mallListShow?'select':''}}">购买</view>
+                <view bindtap="clickInfo" class="{{mallListShow?'':'select'}}">收费说明</view>
+            </view>
+            <view hidden="{{!mallListShow}}">
+                <image mode="widthFix" src="{{mallInfo.productPayNoticeImage}}" style="width: 100%" wx:if="{{mallInfo.productPayNoticeImage&&mallInfo.productPayNoticeImage!=''}}"></image>
+                <view class="mallLists">
+                    <view bindtap="clickItem" class="mallItem  {{index==defaultIndex?'mallItem1':''}}" data-id="{{item.id}}" data-index="{{index}}" data-price="{{item.price}}" data-type="{{item.productType}}" wx:for="{{mallInfo.productList}}" wx:key="index">
+                        <view class="payPrice {{index==defaultIndex?'mallMoney1':''}}">
+                            <view class="mallName">{{item.name}}</view>
+                            <view class="price1">￥{{item.price}}</view>
+                            <view class="price2" wx:if="{{item.initPrice>0}}">￥{{item.initPrice}}</view>
+                        </view>
+                        <view class="discount" wx:if="{{item.isRecommend==1||item.isRecommend==2}}">推荐</view>
+                    </view>
+                </view>
+                <view class="productPayNotice" style="margin: 0;">
+                    <view class="{{index==0?'mallTitle':''}}" wx:for="{{mallInfo.productRemark}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+            </view>
+            <view hidden="{{mallListShow}}">
+                <view class="productPayNotice">
+                    <view class="{{index==0?'mallTitle':''}}" wx:for="{{mallInfo.productMemberRemark}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+                <view class="productPayNotice">
+                    <view class="{{index==0?'mallTitle':''}}" wx:for="{{mallInfo.productRemark}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+                <view class="productPayNotice">
+                    <view class="{{index==0?'mallTitle':''}}" wx:for="{{mallInfo.productPayNotice}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</block>

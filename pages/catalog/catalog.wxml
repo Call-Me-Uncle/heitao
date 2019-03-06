@@ -1,0 +1,97 @@
+<import src="../../template/template.wxml"></import>
+<template is="giftBag" data="{{bagImg:bagImg.hidden,giftBag:bagImg.img,giftTitle:bagImg.info}}"></template>
+<template is="serviceCustomer" data="{{userInfo:userInfo,contactImg:contactImg}}"></template>
+<image bindtap="clickGiftBag" class="clickGiftBag" hidden="{{giftBag}}" src="{{receiveImg}}"></image>
+<header statusBarHeight="{{statusBarHeight}}" title="黑桃大师"></header>
+<official-account></official-account>
+<form bindsubmit="formSubmit" reportSubmit="{{true}}">
+    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                                        <scroll-view scrollY="{{true}}" style="height:{{scrollHeight}}px;position: relative;z-index: 100;">
+                                                                                                                            <view class="boxContent">
+                                                                                                                                <view class="box" wx:for="{{classPackageList}}" wx:for-item="Package" wx:key="index">
+                                                                                                                                    <view>
+                                                                                                                                        <view bindtap="hidden" class="itemMargin {{Package.inPlan==0?'':'inPlanBg'}}" data-lock="{{Package.isLock}}" data-package="{{Package.id}}" data-plan="{{Package.inPlan}}" data-status="{{Package.status}}"> {{Package.name}}</view>
+                                                                                                                                        <image bindtap="hidden" class="lock" data-lock="{{Package.isLock}}" data-package="{{Package.id}}" data-plan="{{Package.inPlan}}" data-status="{{Package.status}}" hidden="{{Package.isLock==0?true:false}}" src="../../images/icons/lock.png"></image>
+                                                                                                                                        <image bindtap="hidden" class="vipCanTry" data-lock="{{Package.isLock}}" data-package="{{Package.id}}" data-plan="{{Package.inPlan}}" data-status="{{Package.status}}" src="{{Package.status==2?'../../images/icons/vip.png':'../../images/icons/vipCanTry.png'}}" wx:if="{{Package.inPlan==0&&(Package.status==2||Package.status==3)}}"></image>
+                                                                                                                                        <view class="inPlan" hidden="{{Package.inPlan==0?true:false}}">
+                                                                                                                                            <image bindtap="hidden" data-lock="{{Package.isLock}}" data-package="{{Package.id}}" data-plan="{{Package.inPlan}}" data-status="{{Package.status}}" src="../../images/icons/inPlan.png"></image>
+                                                                                                                                        </view>
+                                                                                                                                        <image bindtap="hidden" class="openRight {{Package.rotate}}" data-lock="{{Package.isLock}}" data-package="{{Package.id}}" data-plan="{{Package.inPlan}}" data-status="{{Package.status}}" hidden="{{Package.inPlan==1||Package.isLock==1?true:false}}" src="../../images/icons/openRight.png"></image>
+                                                                                                                                        <image class="clkButton  {{Package.inPlan==0?'inPlan0':'inPlan1'}}" src="../../images/icons/clkButton.png"></image>
+                                                                                                                                    </view>
+                                                                                                                                    <view class="bottomBox" hidden="{{Package.id==stamp?false:true}}">
+                                                                                                                                        <view class="bottom" hidden="{{themeList.classPackageId==stamp?false:true}}" wx:if="{{Package.id==themeList.classPackageId}}" wx:for="{{themeList}}" wx:for-item="themeList" wx:key="index">
+                                                                                                                                            <view class="progress" style="width: {{themeList.sortNum/themeList.score*448}}rpx"></view>
+                                                                                                                                            <view bindtap="themeItem" class="bottomItem" data-id="{{themeList.id}}" data-lock="{{Package.isLock}}">
+                                                                                                                                                <text class="textMargin">{{themeList.cnName}}</text>
+                                                                                                                                                <view class="score" hidden="{{themeList.sortNum==100?true:false}}">
+                                                                                                                                                    <text>得分：{{themeList.sortNum}}分</text>
+                                                                                                                                                </view>
+                                                                                                                                            </view>
+                                                                                                                                            <view class="bottomColor"></view>
+                                                                                                                                            <image class="medal" hidden="{{themeList.sortNum==100?false:true}}" src="../../images/icons/medal.png"></image>
+                                                                                                                                            <image bindtap="themeItem" class="rightButton" data-id="{{themeList.id}}" data-lock="{{Package.isLock}}" src="../../images/icons/rightButton.png"></image>
+                                                                                                                                        </view>
+                                                                                                                                    </view>
+                                                                                                                                </view>
+                                                                                                                            </view>
+                                                                                                                            <image class="bjImg" src="../../images/train/bj.jpg"></image>
+                                                                                                                        </scroll-view>
+                                                                                                                    </button>
+                                                                                                                </form>
+                                                                                                            </button>
+                                                                                                        </form>
+                                                                                                    </button>
+                                                                                                </form>
+                                                                                            </button>
+                                                                                        </form>
+                                                                                    </button>
+                                                                                </form>
+                                                                            </button>
+                                                                        </form>
+                                                                    </button>
+                                                                </form>
+                                                            </button>
+                                                        </form>
+                                                    </button>
+                                                </form>
+                                            </button>
+                                        </form>
+                                    </button>
+                                </form>
+                            </button>
+                        </form>
+                    </button>
+                </form>
+            </button>
+        </form>
+    </button>
+</form>

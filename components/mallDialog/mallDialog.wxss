@@ -1,0 +1,201 @@
+@import "../../template/template.wxss";
+
+.coinNumber {
+    font-size: 34rpx;
+    color: #ecd6a5;
+    display: flex;
+    height: 80rpx;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px 0;
+}
+
+.coinNumber view {
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.coinNumber text {
+    display: inline-block;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.coinNumber .infoDetail {
+    font-size: 24rpx;
+    color: #999;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.mallMoney {
+    font-size: 32rpx;
+    color: #282828;
+    line-height: 150rpx;
+}
+
+.mallItem1 {
+    background: #f4e7da;
+}
+
+.coinNumber1 {
+    color: #ecd6a5;
+}
+
+.mallMoney1 {
+    color: #ecd6a5;
+}
+
+.mallContainer {
+    width: 750rpx;
+    color: #333;
+}
+
+.mallTop {
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    background: #000;
+    border-bottom: 1px solid #666;
+}
+
+.mallTop view {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.mallTop .select {
+    background: #666;
+    color: #dbaf68;
+}
+
+.mallLists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10rpx 33rpx;
+}
+
+.mallItem {
+    width: 200rpx;
+    height: 210rpx;
+    line-height: 150rpx;
+    position: relative;
+    overflow: hidden;
+    background: url("https://www.heitaodashi.cn/image/product/background.png");
+    background-size: 100%;
+    border-radius: 10rpx;
+    margin: 0 15rpx;
+    margin-bottom: 30rpx;
+}
+
+.mallItem .mallName {
+    color: #28272c;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    text-align: center;
+    margin: 20rpx 0;
+}
+
+.mallItem .discount {
+    position: absolute;
+    width: 160rpx;
+    height: 35rpx;
+    background: #f00;
+    color: #fff;
+    line-height: 35rpx;
+    right: -57rpx;
+    bottom: 8rpx;
+    font-size: 22rpx;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+
+.mallContent {
+    width: 100%;
+    height: 100%;
+    background: #1b1b1b;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.payPrice {
+    color: #fff;
+    font-size: 30rpx;
+    z-index: 100;
+}
+
+.payPrice .price1 {
+    text-align: center;
+    color: #9d755d;
+    font-size: 44rpx;
+    line-height: 50rpx;
+    font-weight: 700;
+    margin: 10rpx 0;
+}
+
+.payPrice .price2 {
+    text-align: center;
+    color: #666666;
+    font-size: 32rpx;
+    line-height: 50rpx;
+    text-decoration: line-through;
+}
+
+.mallPrice {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.couponNotice {
+    height: 50rpx;
+    background: rgba(0,0,0,0.7);
+    line-height: 50rpx;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 0 50rpx;
+}
+
+.couponNotice image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.taoZi {
+    min-width: 90rpx;
+    height: 90rpx;
+    background: #3f3f3f;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15rpx 0 30rpx;
+}
+
+.taoZi image {
+    width: 77rpx;
+    height: 60rpx;
+}
+
+.couponNotice text {
+    line-height: 50rpx;
+}
+
+.mallTitle {
+    color: #dbaf68;
+    font-size: 32rpx;
+}
+
+.productPayNotice {
+    color: #f5f5f5;
+    font-size: 24rpx;
+    padding: 0 40rpx;
+    margin-top: 30rpx;
+}

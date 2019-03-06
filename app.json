@@ -1,0 +1,71 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/videoDetail/videoDetail",
+        "pages/video/video",
+        "pages/mine/mine",
+        "pages/mall/mall",
+        "pages/level/level",
+        "pages/catalog/catalog",
+        "pages/practice/practice",
+        "pages/myOrder/myOrder",
+        "pages/cost/cost",
+        "pages/aboutUs/aboutUs",
+        "pages/aboutAI/aboutAI",
+        "pages/joinOur/joinOur",
+        "pages/history/history",
+        "pages/myCoupon/myCoupon"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#041A2A",
+        "navigationBarTitleText": "黑桃大师",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom",
+        "disableScroll": true
+    },
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#57be69",
+        "backgroundColor": "#FCFCFC",
+        "borderStyle": "white",
+        "custom": false,
+        "list": [
+            {
+                "pagePath": "pages/level/level",
+                "text": "水平",
+                "iconPath": "images/icons/nav1.png",
+                "selectedIconPath": "images/icons/nav2.png"
+            },
+            {
+                "pagePath": "pages/catalog/catalog",
+                "text": "专项训练",
+                "iconPath": "images/icons/nav3.png",
+                "selectedIconPath": "images/icons/nav4.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "训练",
+                "iconPath": "images/icons/nav5.png",
+                "selectedIconPath": "images/icons/nav6.png"
+            },
+            {
+                "pagePath": "pages/video/video",
+                "text": "视频教程",
+                "iconPath": "images/icons/nav7.png",
+                "selectedIconPath": "images/icons/nav8.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "images/icons/nav9.png",
+                "selectedIconPath": "images/icons/nav10.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "debug": false
+}

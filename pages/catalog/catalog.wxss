@@ -1,0 +1,404 @@
+@import "../../template/template.wxss";
+
+page {
+    height: 100%;
+}
+
+button {
+    height: 86rpx;
+    font-size: 36rpx;
+}
+
+.box {
+    position: relative;
+    padding-bottom: 20rpx;
+}
+
+.itemMargin {
+    margin: 0 60rpx;
+    color: #FFF;
+    font-size: 36rpx;
+    line-height: 89rpx;
+    height: 88rpx;
+    text-align: center;
+    width: 632rpx;
+    position: relative;
+    z-index: 100;
+}
+
+.clkButton {
+    position: absolute;
+    top: 0;
+    left: 60rpx;
+    height: 89rpx;
+    width: 640rpx;
+}
+
+.inPlanBg {
+    color: rgb(126,161,154);
+}
+
+.inPlan0 {
+}
+
+.inPlan1 {
+    opacity: 0.5;
+    color: rgb(126,161,154);
+}
+
+.lock {
+    width: 36rpx;
+    height: 43rpx;
+    position: absolute;
+    left: 165rpx;
+    top: 23rpx;
+    opacity: 0.4;
+    z-index: 100;
+}
+
+.vipCanTry {
+    width: 160rpx;
+    height: 44rpx;
+    position: absolute;
+    left: 90rpx;
+    top: 23rpx;
+    z-index: 100;
+}
+
+.inPlan {
+    width: 165rpx;
+    height: 60rpx;
+    position: absolute;
+    right: 95rpx;
+    top: 16rpx;
+    background: rgba(230,230,230,0.4);
+    border-radius: 10rpx;
+    text-align: center;
+    z-index: 100;
+}
+
+.inPlan image {
+    width: 150rpx;
+    height: 50rpx;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -16rpx;
+}
+
+.medal {
+    width: 46rpx;
+    height: 31rpx;
+    position: absolute;
+    right: 88rpx;
+    top: 20rpx;
+    z-index: 100;
+}
+
+.clickButton {
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    right: 0rpx;
+    top: -2rpx;
+    z-index: 100;
+}
+
+.arrow {
+    width: 18rpx;
+    height: 32rpx;
+}
+
+.progress {
+    position: absolute;
+    top: 12rpx;
+    margin-left: 22rpx;
+    height: 44rpx;
+    border-radius: 16rpx;
+    z-index: 10;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(255,179,79)),color-stop(24%,rgb(253,200,117)),color-stop(49%,rgb(251,221,155)),color-stop(73%,rgb(253,202,122)),color-stop(100%,rgb(255,183,89)));
+    background: linear-gradient(to bottom,rgb(255,179,79) 0%,rgb(253,200,117) 24%,rgb(251,221,155) 49%,rgb(253,202,122) 73%,rgb(255,183,89) 100%);
+}
+
+.bottomBox {
+    position: relative;
+    top: 0;
+    left: 95rpx;
+    width: 520rpx;
+    padding: 20rpx 20rpx 0;
+    margin-bottom: 20rpx;
+}
+
+.bottom {
+    position: relative;
+    border-radius: 100rpx;
+    height: 65rpx;
+    margin-bottom: 25rpx;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgb(217,217,217)),color-stop(50%,rgb(237,237,237)),color-stop(100%,rgb(208,208,208)));
+    background: linear-gradient(to bottom,rgb(217,217,217) 0%,rgb(237,237,237) 50%,rgb(208,208,208) 100%);
+}
+
+.bottomItem {
+    height: 46rpx;
+    position: absolute;
+    top: 10rpx;
+    left: 20rpx;
+    width: 480rpx;
+    z-index: 100;
+}
+
+.bottomColor {
+    height: 46rpx;
+    position: absolute;
+    top: 10rpx;
+    left: 20rpx;
+    width: 450rpx;
+    background: #e9e8e4;
+    border-radius: 16rpx;
+    border: 1rpx solid #9e9e9e;
+}
+
+.textMargin {
+    height: 45rpx;
+    line-height: 45rpx;
+    position: absolute;
+    width: 190rpx;
+    top: 0;
+    left: 35rpx;
+    font-size: 20rpx;
+    color: #333e51;
+}
+
+.score {
+    position: absolute;
+    width: 160rpx;
+    height: 45rpx;
+    color: #333e51;
+    top: 0;
+    right: 10rpx;
+    font-size: 20rpx;
+    line-height: 45rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loginContent {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 50rpx;
+    box-sizing: border-box;
+    z-index: 300;
+}
+
+.loginContent button {
+    margin-top: 500rpx;
+    background: #20C01E;
+    color: #fff;
+}
+
+.openRight {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    right: 100rpx;
+    top: 23rpx;
+    z-index: 100;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.rightButton {
+    width: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    right: -34rpx;
+    top: -6rpx;
+}
+
+.clickGiftBag {
+    position: fixed;
+    z-index: 100000;
+    bottom: 180rpx;
+    right: 3%;
+    width: 100rpx;
+    height: 92rpx;
+}
+
+.bjImg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+}
+
+.boxContent {
+    position: absolute;
+    z-index: 100;
+    padding-top: 30rpx;
+}
+
+.formBtn {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.indexContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+.indexTop {
+    width: 550rpx;
+    height: 544rpx;
+    position: fixed;
+    top: 50rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.indexBottom {
+    padding-top: 120rpx;
+    width: 500rpx;
+    position: relative;
+    bottom: 150rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 0;
+}
+
+.indexItem {
+    position: relative;
+    margin-bottom: 50rpx;
+}
+
+.indexClick {
+    width: 100%;
+    height: 160rpx;
+    border-radius: 50rpx;
+    z-index: 100;
+    align-items: center;
+    position: relative;
+}
+
+.buttonStyle1 {
+    background: linear-gradient(-4deg,#d7dbee 0%,#ebedf7 39%,#ffffff 100%);
+    box-shadow: 0 5rpx 5rpx #6372ba;
+}
+
+.buttonStyle1 text {
+    color: #384377;
+}
+
+.buttonStyle1 .text2 {
+    color: #888;
+}
+
+.buttonStyle2 {
+    background: linear-gradient(-4deg,#e5d1a7 0%,#f0e5ca 39%,#faf8ed 100%);
+    box-shadow: 0 5rpx 5rpx #a09043;
+}
+
+.buttonStyle2 text {
+    color: #726839;
+}
+
+.buttonStyle2 .text2 {
+    color: #a09662;
+}
+
+.buttonStyle3 {
+    background: linear-gradient(-4deg,#93dcdc 0%,#bee8e8 47%,#e8f4f4 100%);
+    box-shadow: 0 5rpx 5rpx #43a182;
+}
+
+.buttonStyle3 text {
+    color: #2f5e5e;
+}
+
+.buttonStyle3 .text2 {
+    color: #497f7f;
+}
+
+.indexClick view {
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.indexClick view .text1 {
+    font-size: 60rpx;
+    width: 330rpx;
+    height: 150rpx;
+    line-height: 110rpx;
+}
+
+.indexClick view .text2 {
+    font-size: 26rpx;
+    height: 10rpx;
+    position: relative;
+    top: -55rpx;
+    width: 460rpx;
+    padding: 0 20rpx;
+    text-align: right;
+}
+
+.indexButton {
+    width: 160rpx;
+    height: 150rpx;
+    position: absolute;
+    top: 0;
+    left: 20rpx;
+}
+
+.clickHand {
+    width: 150rpx;
+    height: 150rpx;
+    position: absolute;
+    top: 30rpx;
+    right: -50rpx;
+    z-index: 1000;
+    animation: fingerHandle 1.2s ease infinite both;
+}
+
+@-webkit-keyframes fingerHandle {
+    0% {
+        transform: none;
+    }
+
+    70% {
+        transform: scale3d(.7,.7,.7);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes fingerHandle {
+    0% {
+        transform: none;
+    }
+
+    70% {
+        transform: scale3d(.7,.7,.7);
+    }
+
+    100% {
+        transform: none;
+    }
+}

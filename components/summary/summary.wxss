@@ -1,0 +1,617 @@
+.wx-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.wx-dialog {
+    position: fixed;
+    z-index: 4000;
+    width: 704rpx;
+    margin-top: 650rpx;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 1176rpx;
+}
+
+.summaryContent1 {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    width: 700rpx;
+    height: 1170rpx;
+    top: 0;
+    background: rgba(17,15,48,0.9);
+    border-radius: 20rpx;
+    border: 2rpx solid #c0b8ff;
+}
+
+.wx-dialog-content {
+    width: 620rpx;
+    padding: 40rpx;
+    padding-bottom: 0;
+    height: 930rpx;
+    font-size: 16px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    z-index: 200;
+}
+
+.wx-dialog-footer {
+    display: flex;
+    align-items: center;
+    line-height: 45px;
+    font-size: 17px;
+    position: relative;
+    top: 20rpx;
+    justify-content: space-around;
+    padding: 0 50rpx;
+    z-index: 200;
+}
+
+.testFooter {
+    display: flex;
+    align-items: center;
+    line-height: 45px;
+    font-size: 17px;
+    position: relative;
+    top: 10rpx;
+    justify-content: space-around;
+}
+
+.buttonImg {
+    width: 162rpx;
+    height: 82rpx;
+    position: relative;
+}
+
+.ewmImg {
+    width: 135rpx;
+    height: 170rpx;
+    position: relative;
+}
+
+.ewmImg .ewm {
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 15rpx;
+    position: inherit;
+    z-index: 10;
+}
+
+.ewmTop {
+    width: 135rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 16rpx;
+    position: absolute;
+    bottom: 30rpx;
+}
+
+.ewmInfo {
+    width: 135rpx;
+    height: 24rpx;
+    line-height: 24rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 16rpx;
+    position: absolute;
+    bottom: 6rpx;
+}
+
+.wx-dialog-footer image {
+    width: 162rpx;
+    height: 82rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wx-dialog-footer button {
+    width: 162rpx;
+    height: 82rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.testFooter image {
+    width: 162rpx;
+    height: 82rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.testFooter button {
+    width: 162rpx;
+    height: 82rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.wx-dialog-btn {
+    display: block;
+    flex: 1;
+    position: relative;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 32rpx;
+    line-height: 77rpx;
+}
+
+.summary {
+    color: #fff;
+}
+
+.summary .top {
+    display: flex;
+    position: relative;
+}
+
+.summary .top .imgContent {
+    width: 150rpx;
+    height: 150rpx;
+    border: 6rpx solid #387def;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary .top .img {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 100%;
+}
+
+.summary .top .scoreContent {
+    text-align: left;
+    height: 140rpx;
+    width: 230rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 22rpx;
+    margin: 10rpx 0 10rpx 40rpx;
+}
+
+.summary .top .scoreContent .userName {
+    font-size: 32rpx;
+    width: 100%;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.summary .top .scoreContent .fontColor {
+    font-size: 36rpx;
+}
+
+.summary .top .scoreContent .userScore {
+    font-size: 30rpx;
+}
+
+.summary .top .seal {
+    height: 188rpx;
+    width: 218rpx;
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 25rpx;
+    right: -35rpx;
+}
+
+.summary .top .seal image {
+    height: 188rpx;
+    width: 218rpx;
+}
+
+.summary .top .seal text {
+    height: 188rpx;
+    width: 218rpx;
+    line-height: 185rpx;
+    letter-spacing: 10rpx;
+    font-size: 30rpx;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fontColor {
+    color: #fbd141;
+}
+
+.summary .middle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 40rpx;
+    line-height: 70rpx;
+    font-weight: bold;
+    height: 70rpx;
+    margin-top: 20rpx;
+    justify-content: space-around;
+    width: 700rpx;
+    position: relative;
+    left: -40rpx;
+}
+
+.summary .middle view {
+    margin-top: 10rpx;
+}
+
+.summary .footTitle {
+    width: 598rpx;
+    height: 480rpx;
+    border: 6rpx solid #3684cd;
+    border-radius: 20rpx;
+    padding: 5rpx;
+    margin-top: 40rpx;
+}
+
+.summary .footTitle .ability {
+    font-size: 32rpx;
+    line-height: 70rpx;
+    text-align: center;
+    background: #387def;
+    border-radius: 10rpx;
+}
+
+.summary .shareInfo {
+    text-align: left;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    margin-top: 20rpx;
+}
+
+.abilityCanvas {
+    width: 598rpx;
+    height: 410rpx;
+}
+
+.summaryContent2 {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    width: 700rpx;
+    height: 1170rpx;
+    top: 0;
+    background: rgba(17,15,48,0.9);
+    border-radius: 20rpx;
+    border: 2rpx solid #c0b8ff;
+}
+
+.summaryContent3 {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    width: 700rpx;
+    height: 1170rpx;
+    top: 0;
+    background: rgba(17,15,48,0.9);
+    border-radius: 20rpx;
+    border: 2rpx solid #c0b8ff;
+}
+
+.summary1 {
+    width: 660rpx;
+    padding: 40rpx 20rpx;
+    height: 1090rpx;
+    font-size: 16px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    z-index: 200;
+}
+
+.testTop {
+    display: flex;
+}
+
+.testTop .testLogoContent {
+    color: #fff;
+    margin-right: 10rpx;
+    font-size: 20rpx;
+    text-align: left;
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10rpx 0;
+}
+
+.testTop .testLogoContent .testLogoText {
+    font-size: 30rpx;
+}
+
+.testTop .testLogo {
+    width: 95rpx;
+    height: 95rpx;
+    border-radius: 100%;
+    border: 4rpx solid #fff;
+}
+
+.testTop .testLogo image {
+    width: 95rpx;
+    height: 95rpx;
+    border-radius: 100%;
+}
+
+.testNameContent {
+    border-bottom: 6rpx solid #C5C5C5;
+    height: 70rpx;
+    position: relative;
+    width: 550rpx;
+    margin: 0 auto;
+    margin-top: 50rpx;
+}
+
+.testNameContent .testNameBj {
+    width: 460rpx;
+    height: 61rpx;
+    position: absolute;
+    left: 45rpx;
+    top: 12rpx;
+}
+
+.testNameContent .testName {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 35rpx;
+    color: #fff;
+    top: 15rpx;
+    width: 400rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.testResult {
+    padding-top: 50rpx;
+    padding-left: 30rpx;
+}
+
+.testResult .testResultStyle {
+    font-size: 35rpx;
+    color: #ff9c00;
+}
+
+.testResult .testResultContent {
+    display: flex;
+    margin-top: 40rpx;
+}
+
+.testTitle {
+    width: 130rpx;
+    height: 56rpx;
+    position: relative;
+}
+
+.testTitle .testTitleImg {
+    width: 130rpx;
+    height: 56rpx;
+}
+
+.testTitle .testTitleInfo {
+    width: 100%;
+    height: 56rpx;
+    text-align: center;
+    color: #fff;
+    line-height: 56rpx;
+    font-size: 24rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.testPro {
+    width: 430rpx;
+    height: 58rpx;
+    margin-left: 20rpx;
+    position: relative;
+}
+
+.testPro .testResultBj {
+    width: 450rpx;
+    height: 58rpx;
+}
+
+.testPro .testResultIcon {
+    width: 16rpx;
+    height: 18rpx;
+    position: absolute;
+    bottom: 0rpx;
+}
+
+.testPro .testResult1 {
+    position: absolute;
+    height: 58rpx;
+    line-height: 58rpx;
+    width: 180rpx;
+    top: 0;
+    left: 0;
+    color: #000000;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.testPro .testResult2 {
+    position: absolute;
+    height: 58rpx;
+    line-height: 58rpx;
+    width: 90rpx;
+    top: 0;
+    left: 180rpx;
+    color: #000000;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.testPro .testResult3 {
+    position: absolute;
+    height: 58rpx;
+    line-height: 58rpx;
+    width: 180rpx;
+    top: 0;
+    left: 270rpx;
+    color: #000000;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.testConclusion {
+    font-size: 20rpx;
+    color: #fff;
+    text-align: left;
+    line-height: 36rpx;
+    padding-left: 60rpx;
+    margin-top: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.testConclusion .testLoophole {
+    font-size: 26rpx;
+}
+
+.cursor {
+    position: fixed;
+    width: 100rpx;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 30rpx;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10000;
+}
+
+.cursorItem {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.cursorItem1 {
+    background: #32aa72;
+}
+
+.summaryClose {
+    width: 65rpx;
+    height: 65rpx;
+    position: absolute;
+    bottom: 30rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1000;
+}
+
+.lineImg {
+    width: 626rpx;
+    height: 16rpx;
+}
+
+.summaryPerfect image {
+    width: 300rpx;
+    height: 270rpx;
+}
+
+.summaryContent3 .summary {
+    width: 640rpx;
+    padding: 40rpx;
+    padding-top: 60rpx;
+}
+
+.summary .footTitle3 {
+    width: 598rpx;
+    border: 6rpx solid #3684cd;
+    border-radius: 20rpx;
+    padding: 5rpx;
+    padding-bottom: 20rpx;
+}
+
+.summary .footTitle3 .titleInfo {
+    font-size: 30rpx;
+    text-align: left;
+    display: block;
+    padding: 0 10rpx;
+    margin-top: -20rpx;
+}
+
+.summary .footTitle3 .ability {
+    font-size: 32rpx;
+    line-height: 70rpx;
+    text-align: center;
+    background: #387def;
+    border-radius: 10rpx;
+}
+
+.summaryContent3 .testTop {
+    margin-top: 50rpx;
+    margin-bottom: 25rpx;
+}
+
+.baoGao {
+    margin-top: 120rpx;
+    margin-left: 25rpx;
+    font-size: 32rpx;
+}
+
+.summaryContent3 .buttonImg {
+    width: 500rpx;
+    height: 100rpx;
+    position: relative;
+}
+
+.summaryContent3 .testFooter image {
+    width: 500rpx;
+    height: 100rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.summaryContent3 .testFooter button {
+    width: 500rpx;
+    height: 100rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    line-height: 90rpx;
+    font-size: 36rpx;
+    letter-spacing: 8rpx;
+}

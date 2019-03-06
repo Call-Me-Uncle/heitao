@@ -1,0 +1,1125 @@
+.headImg {
+    height: 142rpx;
+    width: 90rpx;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    background: rgba(0,0,0,0.4);
+    border-radius: 10rpx;
+    border: 4rpx solid rgba(0,0,0,0);
+}
+
+.headImageBorder {
+    border: 4rpx solid #30f01c;
+}
+
+.allinBorder {
+    border: 4rpx solid #ffec70;
+    box-shadow: 0 0 30rpx #ff3600;
+}
+
+.nick {
+    font-size: 20rpx;
+    width: 90rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.bubble {
+    font-size: 22rpx;
+    color: #fff;
+    width: 74rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    display: inline-block;
+    border-radius: 50rpx;
+    position: absolute;
+}
+
+.headImgLeft .bubble {
+    top: 0rpx;
+    right: -80rpx;
+}
+
+.headImgRight .bubble {
+    top: 0rpx;
+    left: -80rpx;
+}
+
+.headImg .bubbleTop {
+    top: 110rpx;
+}
+
+.glodNumber {
+    color: #fffcdb;
+    font-size: 24rpx;
+}
+
+.imgContainer {
+    height: 90rpx;
+    width: 90rpx;
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.imgContainerItem {
+    height: 90rpx;
+    width: 90rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.allin {
+    position: absolute;
+    top: -22rpx;
+    left: -14rpx;
+    z-index: 100;
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.imgOver {
+    height: 90rpx;
+    width: 90rpx;
+    display: inline-block;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img {
+    width: 90rpx;
+    height: 90rpx;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banker {
+    font-size: 24rpx;
+    color: bisque;
+    line-height: 30rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bankerImg {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.headImgLeft .bankerImg {
+    right: -50rpx;
+    top: 88rpx;
+}
+
+.headImgRight .bankerImg {
+    left: -50rpx;
+    top: 88rpx;
+}
+
+.headImgLeft .bankerTop {
+    right: 0rpx;
+    top: 150rpx;
+}
+
+.headImgRight .bankerTop {
+    left: 0rpx;
+    top: 150rpx;
+}
+
+.glod {
+    font-size: 24rpx;
+    color: #55c949;
+    position: absolute;
+    line-height: 30rpx;
+    top: 45rpx;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20rpx;
+    min-width: 65rpx;
+    justify-content: flex-end;
+    padding: 0 5rpx;
+}
+
+.glodImg {
+    width: 26rpx;
+    height: 26rpx;
+    border-radius: 50%;
+}
+
+.headImgLeft .glod {
+    flex-direction: row-reverse;
+    left: 94rpx;
+}
+
+.headImgRight .glod {
+    flex-direction: row;
+    right: 94rpx;
+}
+
+.headImgLeft .glodImg {
+    margin-right: 5rpx;
+}
+
+.headImgRight .glodImg {
+    margin-left: 5rpx;
+}
+
+.glodTop {
+    top: 150rpx;
+}
+
+.glodRight {
+    left: -100rpx;
+}
+
+.glodLeft {
+    right: -100rpx;
+}
+
+.back {
+    width: 34rpx;
+    height: 46rpx;
+    position: absolute;
+}
+
+.headImgLeft .backContainer {
+    position: absolute;
+    top: 68rpx;
+    left: 68rpx;
+}
+
+.headImgRight .backContainer {
+    position: absolute;
+    top: 68rpx;
+    right: 98rpx;
+}
+
+.backContainer .first {
+    position: absolute;
+    top: 4rpx;
+    left: -4rpx;
+}
+
+.Cards {
+    text-align: center;
+    position: relative;
+    width: 110rpx;
+    z-index: 200;
+}
+
+.card {
+    width: 50rpx;
+    height: 67rpx;
+    position: absolute;
+    top: -65rpx;
+}
+
+.headImgLeft .card {
+    right: 3rpx;
+}
+
+.headImgRight .card {
+    left: 3rpx;
+}
+
+.headImgLeft .card:first-child {
+    right: 56rpx;
+}
+
+.headImgRight .card:first-child {
+    left: 56rpx;
+    z-index: 10;
+}
+
+@-webkit-keyframes myfirst0 {
+    from {
+        transform: translate(-340rpx,190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst0 {
+    from {
+        transform: translate(-340rpx,190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation0 {
+    -webkit-animation: myfirst0 0.08s linear;
+}
+
+@-webkit-keyframes myfirst1 {
+    from {
+        transform: translate(-340rpx,0rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst1 {
+    from {
+        transform: translate(-340rpx,0rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation1 {
+    -webkit-animation: myfirst1 0.08s linear;
+}
+
+@-webkit-keyframes myfirst2 {
+    from {
+        transform: translate(-340rpx,-190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst2 {
+    from {
+        transform: translate(-340rpx,-190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation2 {
+    -webkit-animation: myfirst2 0.08s linear;
+}
+
+@-webkit-keyframes myfirst4 {
+    from {
+        transform: translate(300rpx,-190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst4 {
+    from {
+        transform: translate(300rpx,-190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation4 {
+    -webkit-animation: myfirst4 0.08s linear;
+}
+
+@-webkit-keyframes myfirst5 {
+    from {
+        transform: translate(300rpx,0rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst5 {
+    from {
+        transform: translate(300rpx,0rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation5 {
+    -webkit-animation: myfirst5 0.08s linear;
+}
+
+@-webkit-keyframes myfirst6 {
+    from {
+        transform: translate(300rpx,190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst6 {
+    from {
+        transform: translate(300rpx,190rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation6 {
+    -webkit-animation: myfirst6 0.08s linear;
+}
+
+@-webkit-keyframes myfirst7 {
+    from {
+        transform: translate(300rpx,360rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst7 {
+    from {
+        transform: translate(300rpx,360rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation7 {
+    -webkit-animation: myfirst7 0.08s linear;
+}
+
+@-webkit-keyframes myfirst8 {
+    from {
+        transform: translate(-200rpx,360rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst8 {
+    from {
+        transform: translate(-200rpx,360rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+}
+
+.annotation8 {
+    -webkit-animation: myfirst8 0.08s linear;
+}
+
+@-webkit-keyframes myfirst10 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,190rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst10 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,190rpx);
+        opacity: 1;
+    }
+}
+
+.animate0 {
+    -webkit-animation: myfirst10 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst20 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,0rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst20 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,0rpx);
+        opacity: 1;
+    }
+}
+
+.animate1 {
+    -webkit-animation: myfirst20 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst30 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,-190rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst30 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-340rpx,-190rpx);
+        opacity: 1;
+    }
+}
+
+.animate2 {
+    -webkit-animation: myfirst30 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst40 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,-190rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst40 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,-190rpx);
+        opacity: 1;
+    }
+}
+
+.animate4 {
+    -webkit-animation: myfirst40 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst50 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,0rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst50 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,0rpx);
+        opacity: 1;
+    }
+}
+
+.animate5 {
+    -webkit-animation: myfirst50 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst60 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,190rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst60 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(300rpx,190rpx);
+        opacity: 1;
+    }
+}
+
+.animate6 {
+    -webkit-animation: myfirst60 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst70 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,360rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst70 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,360rpx);
+        opacity: 1;
+    }
+}
+
+.animate7 {
+    -webkit-animation: myfirst70 0.08s linear;
+    opacity: 0;
+}
+
+@-webkit-keyframes myfirst80 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-200rpx,360rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes myfirst80 {
+    from {
+        transform: translate(-7rpx,5rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-200rpx,360rpx);
+        opacity: 1;
+    }
+}
+
+.animate8 {
+    -webkit-animation: myfirst80 0.08s linear;
+    opacity: 0;
+}
+
+.headImgRight {
+    margin-right: 10rpx;
+}
+
+.headImgLeft {
+    margin-left: 10rpx;
+}
+
+.banker .chipImg {
+    position: absolute;
+    width: 26rpx;
+    height: 26rpx;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.headImgLeft .banker .chipAction {
+    top: 0rpx;
+    right: -80rpx;
+    -webkit-animation: chipAnimate1 0.2s linear;
+    transform: translate(-50rpx,45rpx);
+}
+
+@-webkit-keyframes chipAnimate1 {
+    from {
+        transform: translate(-110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50rpx,45rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes chipAnimate1 {
+    from {
+        transform: translate(-110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50rpx,45rpx);
+        opacity: 1;
+    }
+}
+
+.headImgRight .banker .chipAction {
+    top: 0rpx;
+    left: -80rpx;
+    -webkit-animation: chipAnimate2 0.2s linear;
+    transform: translate(50rpx,45rpx);
+}
+
+@-webkit-keyframes chipAnimate2 {
+    from {
+        transform: translate(110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,45rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes chipAnimate2 {
+    from {
+        transform: translate(110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,45rpx);
+        opacity: 1;
+    }
+}
+
+.headImgLeft .bankerTop .chipAction {
+    top: 0rpx;
+    right: -80rpx;
+    -webkit-animation: chipAnimate3 0.2s linear;
+    transform: translate(-50rpx,155rpx);
+}
+
+@-webkit-keyframes chipAnimate3 {
+    from {
+        transform: translate(-110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50rpx,155rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes chipAnimate3 {
+    from {
+        transform: translate(-110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50rpx,155rpx);
+        opacity: 1;
+    }
+}
+
+.headImgRight .bankerTop .chipAction {
+    top: 0rpx;
+    left: -80rpx;
+    -webkit-animation: chipAnimate4 0.2s linear;
+    transform: translate(50rpx,155rpx);
+}
+
+@-webkit-keyframes chipAnimate4 {
+    from {
+        transform: translate(110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,155rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes chipAnimate4 {
+    from {
+        transform: translate(110rpx,115rpx);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,155rpx);
+        opacity: 1;
+    }
+}
+
+.potChip {
+    width: 26rpx;
+    height: 26rpx;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+}
+
+.potChipAction0 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction0 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction0 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,160rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction0 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,160rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction1 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction1 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction1 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,-30rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction1 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,-30rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction2 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction2 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction2 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,-230rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction2 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-260rpx,-230rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction3 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction3 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction3 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-130rpx,-600rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction3 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-130rpx,-600rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction4 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction4 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction4 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,-230rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction4 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,-230rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction5 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction5 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction5 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,-30rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction5 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,-30rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction6 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction6 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction6 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,160rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction6 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(200rpx,160rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction7 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction7 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction7 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,270rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction7 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(50rpx,270rpx);
+        opacity: 1;
+    }
+}
+
+.potChipAction8 {
+    top: 0rpx;
+    right: 0rpx;
+    -webkit-animation: potChipAction8 0.3s linear;
+}
+
+@-webkit-keyframes potChipAction8 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-130rpx,270rpx);
+        opacity: 1;
+    }
+}
+
+@keyframes potChipAction8 {
+    from {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-130rpx,270rpx);
+        opacity: 1;
+    }
+}

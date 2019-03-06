@@ -1,0 +1,21 @@
+<view class="wx_dialog_container" hidden="{{!isShow}}">
+    <view catchtap="_hideDialog" class="wx-mask"></view>
+    <view class="wx-dialog">
+        <image class="dian1" src="../../images/icons/dian1.png"></image>
+        <image class="dian2" src="../../images/icons/dian1.png"></image>
+        <view class="wx-dialog-title">{{title}}</view>
+        <view class="opinion">
+            <textarea bindinput="AreaIpt" placeholder="反馈意见如被采纳，奖励5-500桃子" value="{{AreaValue}}"></textarea>
+            <view catchtap="_cancelEvent" class="wx-dialog-btn first" wx:if="{{cancelText!=''}}">
+                <text>{{cancelText}}</text>
+                <image class="button" src="../../images/icons/button.png"></image>
+            </view>
+            <view catchtap="_confirmEvent" class="wx-dialog-btn second" wx:if="{{confirmText!=''}}">
+                <text>{{confirmText}}</text>
+                <image class="button" src="../../images/icons/button.png"></image>
+            </view>
+        </view>
+        <image class="dian3" src="../../images/icons/dian1.png"></image>
+        <image class="dian4" src="../../images/icons/dian1.png"></image>
+    </view>
+</view>

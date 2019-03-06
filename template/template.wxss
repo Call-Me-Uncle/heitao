@@ -1,0 +1,615 @@
+.noDataContent {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.noDataContent .content {
+    width: 500rpx;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.noDataContent image {
+    width: 500rpx;
+    height: 280rpx;
+}
+
+.noDataContent .info {
+    width: 400rpx;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #585858;
+    font-size: 24rpx;
+}
+
+.playAction {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.playActionContent {
+    position: fixed;
+    z-index: 1001;
+    width: 400rpx;
+    min-height: 220rpx;
+    bottom: 130rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: #000;
+    text-align: center;
+    background: rgba(229,255,249,1);
+    border-radius: 20rpx;
+}
+
+.playActionInfo {
+    font-size: 32rpx;
+    padding: 25rpx 40rpx;
+    min-height: 100rpx;
+    padding-bottom: 40rpx;
+    display: inline-block;
+}
+
+.playActionButton {
+    position: absolute;
+    width: 200rpx;
+    height: 52rpx;
+    bottom: 0rpx;
+    right: -10rpx;
+}
+
+.playActionButton text {
+    color: #888;
+    font-size: 28rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    display: inline-block;
+    width: 200rpx;
+    height: 52rpx;
+    line-height: 52rpx;
+}
+
+.playActionButton image {
+    width: 200rpx;
+    height: 52rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.giftBagContent {
+    position: fixed;
+    z-index: 100000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.giftBagContent .close {
+    position: absolute;
+    top: -25rpx;
+    right: -25rpx;
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.giftBagContent .giftZhu {
+    width: 558rpx;
+    height: 720rpx;
+}
+
+.giftBagContent .giftTitle {
+    font-size: 40rpx;
+    width: 558rpx;
+    text-align: center;
+    position: absolute;
+    top: 85rpx;
+    color: #ffde31;
+    font-weight: 700;
+}
+
+.levelModel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 625rpx;
+    height: 400rpx;
+    border-radius: 20rpx;
+    z-index: 10000;
+    background: #0f122d;
+    overflow: hidden;
+}
+
+.levelClose {
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    width: 65rpx;
+    height: 65rpx;
+    z-index: 10000;
+}
+
+.levelTop {
+    background: #283267;
+    height: 80rpx;
+}
+
+.levelContent {
+    text-align: center;
+}
+
+.levelInfo {
+    height: 130rpx;
+    padding: 0 30rpx;
+    padding-top: 80rpx;
+    font-size: 30rpx;
+}
+
+.levelInfo text {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.levelButton {
+    width: 205rpx;
+    height: 80rpx;
+    margin-left: 200rpx;
+    z-index: 10;
+}
+
+.levelButtonInfo {
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    line-height: 80rpx;
+}
+
+.imgScrollContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+}
+
+.imgScroll {
+    width: 650rpx;
+    min-height: 300rpx;
+    max-height: 850rpx;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.imgScroll scroll-view {
+    overflow: hidden;
+    width: 650rpx;
+    min-height: 300rpx;
+    max-height: 850rpx;
+}
+
+.imgScrollImg1 {
+    width: 65rpx;
+    height: 65rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    z-index: 100;
+}
+
+.imgScroll .imgScrollImg2 {
+    width: 100%;
+}
+
+.playColor {
+    color: #ffa442;
+}
+
+.serviceCustomer {
+    width: 100rpx;
+    height: 100rpx;
+    position: fixed;
+    z-index: 100000;
+    bottom: 50rpx;
+    right: 3%;
+}
+
+.serviceCustomer image {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.serviceCustomer button {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: none;
+}
+
+.couponContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    background: rgba(0,0,0,0.6);
+}
+
+.couponContent {
+    position: relative;
+    width: 610rpx;
+    height: 850rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.couponContent .coupon {
+    width: 610rpx;
+    height: 743rpx;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.couponContent .goBuy {
+    width: 610rpx;
+    height: 300rpx;
+    position: absolute;
+    top: 350rpx;
+    left: 0;
+    z-index: 100;
+}
+
+.couponContent .close {
+    width: 74rpx;
+    height: 74rpx;
+    position: absolute;
+    left: 50%;
+    bottom: 5rpx;
+    transform: translate(-50%,0);
+}
+
+.payMemberContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background: rgba(0,0,0,0.4);
+}
+
+.payMemberContent {
+    position: relative;
+    width: 610rpx;
+    height: 840rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.payMemberBind {
+    background: #fff;
+    border-radius: 20rpx;
+    padding-top: 80rpx;
+    width: 610rpx;
+    height: 640rpx;
+}
+
+.payMemberInfo {
+    border: 2rpx solid #ffa758;
+    padding-top: 20rpx;
+    width: 400rpx;
+    height: 160rpx;
+    margin-left: 105rpx;
+    border-radius: 15rpx;
+    color: #ffa758;
+}
+
+.payMemberInfo .info1 {
+    font-size: 36rpx;
+}
+
+.payMemberInfo .info2 {
+    font-size: 28rpx;
+}
+
+.payMemberInfo .info3 {
+    font-size: 30rpx;
+    color: #555;
+}
+
+.payMemberContent .payMemberClose {
+    width: 74rpx;
+    height: 74rpx;
+    position: absolute;
+    left: 50%;
+    bottom: 5rpx;
+    transform: translate(-50%,0);
+}
+
+.payMemberContent .submitPayMoney {
+    width: 530rpx;
+    height: 85rpx;
+    background: #ffa758;
+    line-height: 85rpx;
+    border-radius: 20rpx;
+    font-size: 34rpx;
+    color: #fff;
+    margin: 50rpx 40rpx;
+}
+
+.payMemberContent .submitPayMoney text {
+    margin-left: 30rpx;
+}
+
+.memberRule {
+    text-align: left;
+    padding: 0 60rpx;
+}
+
+.memberRule .title {
+    color: #666;
+    font-size: 26rpx;
+}
+
+.memberRule .ruleInfo {
+    display: flex;
+    font-size: 22rpx;
+    color: #7a7a7a;
+    line-height: 34rpx;
+    margin-top: 10rpx;
+}
+
+.memberRule .ruleInfo .ruleNumber {
+    font-size: 24rpx;
+    margin-right: 10rpx;
+}
+
+.newCourtesy {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.6);
+}
+
+.newCourtesyContent {
+    position: relative;
+    width: 600rpx;
+    height: 420rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3px;
+    overflow: hidden;
+    background: linear-gradient(135deg,transparent 7px,#003b35 0) top left,linear-gradient(-135deg,transparent 7px,#003b35 0) top right,linear-gradient(-45deg,transparent 7px,#003b35 0) bottom right,linear-gradient(45deg,transparent 7px,#003b35 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.newCourtesyLeftTop {
+    width: 178rpx;
+    height: 62rpx;
+    position: absolute;
+    top: -10rpx;
+    left: -21rpx;
+}
+
+.newCourtesyDown {
+    width: 328rpx;
+    height: 39rpx;
+    position: absolute;
+    bottom: -17rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.newCourtesyGift {
+    width: 487rpx;
+    height: 24rpx;
+}
+
+.newCourtesyTitle {
+    font-size: 18px;
+    padding: 15px;
+    color: #fff;
+}
+
+.newCourtesyContainer {
+    text-align: center;
+    color: yellow;
+    font-size: 30rpx;
+}
+
+.newCourtesySubmit {
+    position: relative;
+    top: 35rpx;
+}
+
+.newCourtesyButton {
+    width: 238rpx;
+    height: 63rpx;
+    position: relative;
+}
+
+.newCourtesySubmit text {
+    color: #fff;
+    font-size: 30rpx;
+    position: absolute;
+    z-index: 100;
+    line-height: 27rpx;
+    top: 19rpx;
+    letter-spacing: 5rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.tipsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+}
+
+.tipsContent {
+    width: 535rpx;
+    background: #121d3b;
+    border-radius: 20rpx;
+    position: relative;
+    padding: 30rpx;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    z-index: 1100;
+}
+
+.tipsImg {
+    width: 100%;
+    min-height: 334rpx;
+}
+
+.tipsMain {
+    font-size: 36rpx;
+    line-height: 54rpx;
+    color: #fff;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 30rpx;
+}
+
+.tipsName {
+    text-align: right;
+    font-size: 24rpx;
+    color: #fff;
+}
+
+.tipsAI {
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    padding: 0 20%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50rpx;
+}
+
+.tipsEWM {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.tipsClose {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 60rpx;
+    border-radius: 100%;
+}
+
+.tipsPageClose {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.videoDialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100000;
+}
+
+.videoHidden {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+}
+
+.videoDialog .content1 {
+    width: 560rpx;
+    padding: 20rpx;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+}
+
+.videoDialog .content2 {
+    width: 560rpx;
+    padding: 20rpx;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    bottom: 15%;
+}
+
+.videoDialog .videoContent .videoClose {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 45rpx;
+    right: 45rpx;
+    z-index: 1000;
+}
+
+.videoDialog .videoContent .videoImg {
+    width: 100%;
+}
+
+.videoDialog .videoContent button {
+    width: 200rpx;
+    height: 70rpx;
+    padding: 0;
+    background: none;
+    position: absolute;
+    bottom: 55rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 100;
+}
+
+.videoDialog .videoContent button image {
+    width: 200rpx;
+    height: 70rpx;
+}

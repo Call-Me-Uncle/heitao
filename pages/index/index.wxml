@@ -1,0 +1,91 @@
+<import src="../../template/template.wxml"></import>
+<template is="giftBag" data="{{bagImg:bagImg.hidden,giftBag:bagImg.img,giftTitle:bagImg.info}}"></template>
+<template is="serviceCustomer" data="{{userInfo:userInfo,contactImg:contactImg}}"></template>
+<template is="coupon" data="{{coupon:coupon.hidden,imgUrl:coupon.imgUrl}}"></template>
+<template is="newCourtesy" data="{{giveCoin:giveCoin.info,newCourtesyHidden:giveCoin.hidden}}"></template>
+<template is="tipsDialog" data="{{tipsInfo:tipsInfo}}"></template>
+<image bindtap="clickGiftBag" class="clickGiftBag" hidden="{{giftBag}}" src="{{receiveImg}}"></image>
+<form bindsubmit="formSubmit" class="loginContent" hidden="{{authorization}}" reportSubmit="true">
+    <button bindgetuserinfo="bindGetUserInfo" formType="submit" openType="getUserInfo" wx:if="{{canIUse}}">授权登录</button>
+    <view wx:else>请升级微信版本</view>
+</form>
+<dialog bgColor="{{bgColor}}" bind:cancelEvent="cancelEvent" bind:clickItem="clickItem" bind:confirmEvent="confirmEvent" cancelText="{{cancelText}}" confirmText="{{confirmText}}" content="{{content}}" contentHidden="{{contentHidden}}" dHidden="{{dHidden}}" id="dialog" newHidden="{{newHidden}}" position="{{false}}" title="{{title}}"></dialog>
+<newDialog bind:cancelDialog="newDialog" bind:confirmEvent="newDialog" cancelText="" confirmText="立即领取" content="{{giveCoin}}" id="newDialog" title="新人礼包"></newDialog>
+<official-account></official-account>
+<form bindsubmit="formSubmit" reportSubmit="{{true}}">
+    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                        <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                            <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                                <form bindsubmit="formSubmit" reportSubmit="{{true}}">
+                                                                                                                    <button class="formBtn" formType="submit" style="height:{{scrollHeight}}px;">
+                                                                                                                        <scroll-view scrollY="{{true}}" style="height:{{scrollHeight}}px;position: relative;z-index: 100;">
+                                                                                                                            <view class="indexContent">
+                                                                                                                                <view class="indexBottom">
+                                                                                                                                    <view bindtap="train" class="indexItem" data-action="{{item.arrayValue[3]}}" data-id="{{item.valueInfoSecond}}" data-index="{{index}}" data-keyInfo="{{item.keyInfo}}" wx:for="{{mainButtonList}}" wx:key="index">
+                                                                                                                                        <view class="indexClick {{item.keyInfo=='vip'||item.keyInfo=='vipCanTry'?'buttonStyle2':item.keyInfo=='video'?'buttonStyle3':'buttonStyle1'}}">
+                                                                                                                                            <image class="indexButton" src="{{item.arrayValue[1]}}"></image>
+                                                                                                                                            <view>
+                                                                                                                                                <text class="text1" decode="{{true}}">{{item.arrayValue[0]}}</text>
+                                                                                                                                                <text class="text2" decode="{{true}}">{{item.arrayValue[2]}}</text>
+                                                                                                                                            </view>
+                                                                                                                                        </view>
+                                                                                                                                        <image class="clickHand" src="../../images/icons/hand.png" wx:if="{{item.arrayValue[3]=='important'}}"></image>
+                                                                                                                                    </view>
+                                                                                                                                </view>
+                                                                                                                            </view>
+                                                                                                                            <image class="bjImg" src="../../images/train/bj.jpg"></image>
+                                                                                                                        </scroll-view>
+                                                                                                                    </button>
+                                                                                                                </form>
+                                                                                                            </button>
+                                                                                                        </form>
+                                                                                                    </button>
+                                                                                                </form>
+                                                                                            </button>
+                                                                                        </form>
+                                                                                    </button>
+                                                                                </form>
+                                                                            </button>
+                                                                        </form>
+                                                                    </button>
+                                                                </form>
+                                                            </button>
+                                                        </form>
+                                                    </button>
+                                                </form>
+                                            </button>
+                                        </form>
+                                    </button>
+                                </form>
+                            </button>
+                        </form>
+                    </button>
+                </form>
+            </button>
+        </form>
+    </button>
+</form>

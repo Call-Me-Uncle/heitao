@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "dialog": "../../components/dialog/dialog",
+        "header": "../../components/header/header",
+        "clickDialog": "../../components/clickDialog/clickDialog",
+        "richText": "../../components/richText/richText"
+    },
+    "navigationBarTitleText": "训练场"
+}

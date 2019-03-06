@@ -1,0 +1,11 @@
+<view style="position: relative;top: 0;left: 0;z-index: 10000">
+    <view style="height:{{statusBarHeight}}px;background:{{statusBarBG}};"></view>
+    <view class="statusBarTitle" hidden="{{statusBarTitleHidden}}" style="background:{{statusBarTitleBG}};color:{{statusBarTitleColor}};">
+        <view catchtap="_back" class="item item1">
+            <image src="../../images/mine/leftArrow.png" wx:if="{{!imgHidden}}"></image>
+            <text> {{left}}</text>
+        </view>
+        <view class="item item2">{{title}}</view>
+        <view class="item item3">{{right}}</view>
+    </view>
+</view>

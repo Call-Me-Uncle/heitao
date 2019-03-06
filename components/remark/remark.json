@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "richText": "../richText/richText",
+        "clickDialog": "../clickDialog/clickDialog"
+    }
+}

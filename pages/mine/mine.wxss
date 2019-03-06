@@ -1,0 +1,157 @@
+@import "../../template/template.wxss";
+
+page {
+    background: #fff;
+}
+
+.content {
+    padding: 0 50rpx;
+    min-height: 50rpx;
+    background-color: #fff;
+}
+
+.mineInfo {
+    height: 400rpx;
+    z-index: 100;
+    text-align: center;
+}
+
+.headImg {
+    position: relative;
+    z-index: 100;
+    top: 100rpx;
+}
+
+.headImg view {
+    width: 192rpx;
+    height: 192rpx;
+    padding: 4rpx;
+    background: #fff;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.headImg image {
+    width: 192rpx;
+    height: 192rpx;
+    border-radius: 100%;
+}
+
+.name {
+    color: #010101;
+    letter-spacing: 5rpx;
+    font-size: 34rpx;
+    position: relative;
+    top: 88rpx;
+    z-index: 100;
+}
+
+.coin {
+    color: #999;
+    font-size: 26rpx;
+    position: relative;
+    top: 85rpx;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.member {
+    color: #999;
+    font-size: 24rpx;
+    position: relative;
+    top: 85rpx;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member image {
+    width: 56rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}
+
+.clockContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300rpx;
+}
+
+.itemList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+}
+
+.iconContent {
+    height: 92rpx;
+}
+
+.icon {
+    width: 36rpx;
+    height: 46rpx;
+    vertical-align: middle;
+    margin-right: 30rpx;
+}
+
+.our {
+    width: 46rpx;
+    height: 46rpx;
+    vertical-align: middle;
+    margin-right: 30rpx;
+}
+
+.iconText {
+    font-size: 28rpx;
+    color: #444444;
+    line-height: 92rpx;
+}
+
+.rightArrow {
+    width: 18rpx;
+    height: 32rpx;
+}
+
+scroll-view {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.viewTop {
+    position: absolute;
+    width: 2000rpx;
+    height: 2000rpx;
+    background: #07A79F;
+    border-radius: 100%;
+    top: -1800rpx;
+    left: -625rpx;
+}
+
+.taoZi {
+    width: 58rpx;
+    height: 45rpx;
+}
+
+.mallTaoZi {
+    position: relative;
+    height: 45rpx;
+    margin-right: 20rpx;
+}
+
+.taoZi2 {
+    position: absolute;
+    left: 20rpx;
+}

@@ -1,0 +1,11 @@
+@import "../dialog/dialog.wxss";
+
+.title {
+    color: #353535;
+    font-size: 30rpx;
+}
+
+.contentInfo {
+    color: #3CC51F;
+    font-size: 28rpx;
+}

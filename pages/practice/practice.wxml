@@ -1,0 +1,238 @@
+<import src="../../template/template.wxml"></import>
+<template is="playAction" data="{{playAction:playAction.hidden,playColor:playAction.color,button:'点击继续',playActionInfo:playAction.info,playActionWidth:playAction.playActionWidth}}"></template>
+<template is="imgScroll" data="{{imgScroll:imgScroll.imgScroll,imgSrc:imgScroll.imgSrc}}"></template>
+<template is="tipsDialog" data="{{tipsInfo:tipsInfo}}"></template>
+<view bindtap="menuContent" class="menuDetailContent" hidden="{{menuHidden.hidden}}">
+    <view catchtap="handleTap2" class="menuDetail {{menuHidden.animate}}">
+        <view catchtap="signOut">
+            <image class="menuImg" src="../../images/train/quit.png"></image>
+            <text>退出</text>
+        </view>
+    </view>
+</view>
+<view bindtap="{{shiFanData?'continueReview':''}}" class="perfectShow" hidden="{{perfectShow}}">
+    <view class="{{victory=='perfect'?'victory1':'victory'}} {{perfectAction}}">
+        <button class="loadingButton" hidden="{{loadingButton}}" loading="{{true}}">获取点评中</button>
+        <image class="win" src="../../images/train/win.png" wx:if="{{victory=='win'?true:false}}"></image>
+        <image class="lose" src="../../images/train/lose.png" wx:if="{{victory=='lose'?true:false}}"></image>
+        <view class="perfect {{perfectAction}}" wx:if="{{victory=='perfect'?true:false}}">
+            <view class="perfectTop">
+                <image bindtap="perfectAction" class="perfectActionImg" src="../../images/train/close1.png"></image>
+            </view>
+            <view class="perfectFooter">
+                <view class="pTop">
+                    <image class="perfectImg" src="../../images/train/perfect.png"></image>
+                    <view class="pText">
+                        <view class="pText1">这手牌打的完美！</view>
+                        <view class="pText1">本次点评不消耗桃子</view>
+                    </view>
+                </view>
+                <view class="pCenter">
+                    <button data-type="share" openType="share" style="background: none;background-size:100% 100%;background-repeat:no-repeat;"></button>
+                    <image class="showOff" src="../../images/train/showOff.png"></image>
+                </view>
+                <view class="pBottom">
+                    <view bindtap="{{victory=='perfect'?'perfectShow':''}}" class="pImgContent" data-name="replay" hidden="{{cancelText==''?true:trainType}}">
+                        <image class="pImg1" src="../../images/train/button1.png"></image>
+                        <image class="pImg2" src="../../images/train/item2.png"></image>
+                        <text>重玩本手</text>
+                    </view>
+                    <view bindtap="{{victory=='perfect'?'perfectShow':''}}" class="pImgContent" data-name="master" hidden="{{shiFanButton}}">
+                        <image class="pImg1" src="../../images/train/button1.png"></image>
+                        <image class="pImg2" src="../../images/train/item1.png" style="left: 33rpx;"></image>
+                        <text>高手示范</text>
+                    </view>
+                    <view bindtap="{{victory=='perfect'?'perfectShow':''}}" class="pImgContent" data-name="{{remarkConfirm.text}}" hidden="{{remarkConfirm.text==''?true:false}}">
+                        <image class="pImg1" src="../../images/train/button1.png"></image>
+                        <image class="pImg2" src="../../images/train/item3.png"></image>
+                        <text>{{remarkConfirm.text}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tipsInfo" hidden="{{!shiFanData}}">高手示范播放完毕，点击屏幕返回到点评</view>
+</view>
+<button class="loadingButton loading" hidden="{{perfectShow?loadingButton:true}}" loading="{{true}}">获取点评中</button>
+<dialog bgColor="{{Introduction.bgColor}}" bind:cancelDialog="cancelIntroduction" bind:confirmEvent="confirmIntroduction" cancelText="{{Introduction.cancelText}}" confirmText="{{Introduction.confirmText}}" content="{{Introduction.content}}" contentHidden="{{Introduction.contentHidden}}" couponImgUrl="{{couponImgUrl}}" id="Introduction" richText="{{Introduction.richText}}" title="{{Introduction.title}}"></dialog>
+<tipsDialog id="tipsDialog"></tipsDialog>
+<dialogModel bind:cancelDialog="cancelIntroduction" cancelText="" confirmText="" content="系统检测到上次练习未完成,将为您自动播放之前牌局" id="dialogModel" title=""></dialogModel>
+<remark bind:cancelEvent="rePlay" bind:centerEvent="discuss" bind:collect="collect" bind:confirmEvent="nextGame" bind:demonstration="demonstration" bind:playBack="playBack" bind:praise="praise" bind:tread="tread" cancelText="{{cancelText}}" centerText="{{remarkConfirm.discuss}}" confirmText="{{remarkConfirm.text}}" id="remark" opAreaValue="{{opAreaValue}}" opinion="{{hideRemark}}" playBackButton="{{playBackButton}}" remakeImg="{{remarkConfirm.image}}" shiFanButton="{{shiFanButton}}" title="{{remarkConfirm.title}}" trainType="{{trainType}}"></remark>
+<remark cancelText="" confirmText="" headImg="{{seats[7].headImage}}" headImgHidden="{{false}}" iconHide="true" id="remarkHead" title="{{seats[7].name}}"></remark>
+<isSlider bindtap="hideSilder" changeMIn="{{minRaise}}" iconLeft="{{iconLeft}}" id="isSlider" isSilder="{{hideSilder}}" max="{{maxRaise}}" min="{{minRaise}}" sliderProgress="{{sliderProgress}}"></isSlider>
+<summary bind:summaryClose="summaryClose" id="summary" serverImg="{{serverImg}}" summary="{{summary}}"></summary>
+<view hidden="{{tips.hidden}}" id="tips">
+    <image src="../../images/train/tips.png"></image>
+    <text>{{tips.info}}</text>
+</view>
+<view bindtap="{{guide.bindName}}" class="guide" data-info="{{seats[7].detailImage}}" hidden="{{guide.show}}" src="{{seats[7].headImage}}">
+    <view class="headImg" hidden="{{guide.step==1?false:true}}">
+        <image class="image1" src="{{seats[7].headImage}}"></image>
+        <image class="image2" src="../../images/icons/hand.png"></image>
+    </view>
+    <view class="bookContent" hidden="{{guide.step==2?false:true}}">
+        <image class="book" src="../../images/train/book.png"></image>
+        <image class="image2" src="../../images/icons/hand.png"></image>
+    </view>
+    <view class="guideInfo">
+        <image class="guideImg" src="{{guide.imgUrl}}" wx:if="{{!guide.show}}"></image>
+        <view wx:if="{{guide.info!=''}}">
+           {{guide.info}}
+       </view>
+    </view>
+</view>
+<view style="height: 100%">
+    <view class="practiceContainer">
+        <view class="top" style="display: flex;">
+            <headImg dealer_btn="{{dealer_btn}}" glodTop="{{true}}" headImageData="{{seats[7]}}" isRight="{{false}}" wx:if="{{seats[7].state!='empty'}}"></headImg>
+            <headImg dealer_btn="{{dealer_btn}}" glodTop="{{true}}" headImageData="{{seats[8]}}" wx:if="{{seats[8].state!='empty'}}"></headImg>
+        </view>
+        <view class="bottom">
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[6]}}" isRight="{{false}}" wx:if="{{seats[6].state!='empty'}}"></headImg>
+            <view class="poolBottom">
+                <image class="logo" src="../../images/train/logo.png"></image>
+                <view class="isChip isList">底池：{{pot}}</view>
+                <view class="chipContent isList">
+                    <image class="chipImg" src="../../images/train/chip.png"></image>
+                    <view>
+                        <text class="chipNumber">{{pre_pot}}</text>
+                    </view>
+                </view>
+            </view>
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[0]}}" wx:if="{{seats[0].state!='empty'}}"></headImg>
+            <view class="vacancyContainer" wx:if="{{seats[6].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+            <view class="vacancyContainer" wx:if="{{seats[0].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[5]}}" isRight="{{false}}" wx:if="{{seats[5].state!='empty'}}"></headImg>
+            <view class="cards">
+                <view class="cardContent">
+                    <view class="cardImg">
+                        <image class="card" src="{{showPuke[0]}}" wx:if="{{showPuke[0]!=''&&showPuke[0]}}"></image>
+                    </view>
+                    <view class="cardImg">
+                        <image class="card" src="{{showPuke[1]}}" wx:if="{{showPuke[1]!=''&&showPuke[1]}}"></image>
+                    </view>
+                    <view class="cardImg">
+                        <image class="card" src="{{showPuke[2]}}" wx:if="{{showPuke[2]!=''&&showPuke[2]}}"></image>
+                    </view>
+                    <view class="cardImg">
+                        <image class="card" src="{{showPuke[3]}}" wx:if="{{showPuke[3]!=''&&showPuke[3]}}"></image>
+                    </view>
+                    <view class="cardImg">
+                        <image class="card" src="{{showPuke[4]}}" wx:if="{{showPuke[4]!=''&&showPuke[4]}}"></image>
+                    </view>
+                </view>
+            </view>
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[1]}}" wx:if="{{seats[1].state!='empty'}}"></headImg>
+            <view class="vacancyContainer" wx:if="{{seats[5].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+            <view class="vacancyContainer" wx:if="{{seats[1].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+        </view>
+        <view class="bottom">
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[4]}}" isRight="{{false}}" wx:if="{{seats[4].state!='empty'}}"></headImg>
+            <view class="amountDegree">
+                <view class="info isList">
+                    <text>盲注 {{small_blind_amount}}/{{small_blind_amount*2}}<text decode="{{true}}" wx:if="{{ante>0}}">&nbsp;({{ante}})</text>
+                        <text decode="{{true}}" wx:if="{{straddle}}">&nbsp;Straddle</text>
+                    </text>
+                </view>
+                <view class="info isList">
+                    <text>难度:{{degree_str}}</text>
+                </view>
+                <view class="info isList">
+                    <text>({{currentHhNum}}/{{totalHhNum}})</text>
+                </view>
+            </view>
+            <headImg dealer_btn="{{dealer_btn}}" headImageData="{{seats[2]}}" wx:if="{{seats[2].state!='empty'}}"></headImg>
+            <view class="vacancyContainer" wx:if="{{seats[4].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+            <view class="vacancyContainer" wx:if="{{seats[2].state=='empty'}}">
+                <view class="vacancy">
+                    <text>空位</text>
+                </view>
+            </view>
+        </view>
+        <view class="infoContent">
+            <view class="annotationContent">
+                <view bindtouchstart="heel" class="annotation {{index%2==0?'':'sencondTop'}} {{index==2?'firstTop':''}}" data-action="RAISE" data-click="{{item.bgColor}}" data-number="{{index}}" hidden="{{addHidden?annotation:true}}" wx:for="{{raiseBtn}}" wx:key="index">
+                    <view class="annotationTop {{item.bgColor?'':'raiseColor'}}">{{item.raiseNumber}}</view>
+                    <view class="multiple {{item.bgColor?'':'raiseBgColor'}}">
+                        <view>{{item.multiple}}</view>
+                        <view hidden="{{item.multiple=='allin'?true:false}}">{{item.title}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="infoContent" style="padding-bottom: 120rpx;position: relative">
+            <view class="operation" hidden="{{annotation}}">
+                <view bindtouchstart="heel" class="operationItem" data-action="FOLD">
+                    <view class="actionsContent {{foldImg?'itemContentFold0':'itemContentFold1'}}">
+                        <image class="operationImg" src="../../images/train/fold.png"></image>
+                    </view>
+                    <view class="{{foldImg?'flod':'isFold'}}">弃牌</view>
+                </view>
+                <view class="operationItem" hidden="{{addHidden?annotation:true}}">
+                    <view bindtap="annotation" class="operationItem operationTop">
+                        <view class="actionsContent itemContentAdd">
+                            <image class="operationImg" src="../../images/train/add.png"></image>
+                        </view>
+                        <view class="free">自由加注</view>
+                        <view class="refuel">{{seats[3].initial_stack}}</view>
+                    </view>
+                    <view class="heroChip" hidden="{{seats[3].paidCount==0?true:false}}" style="top: -60rpx;">
+                        <image src="../../images/train/chip.png"></image>
+                        <text>{{seats[3].paidCount}}</text>
+                    </view>
+                    <view bindtouchstart="heel" class="add" data-action="FREE" hidden="{{hideSilder}}">确定</view>
+                    <image class="bankerImg" hidden="{{dealer_btn==seats[3].uuid?false:true}}" src="../../images/train/banker.png"></image>
+                </view>
+                <view class="operation" hidden="{{addHidden?true:annotation}}" style="padding: 0;">
+                    <view class="operationItem operationTop">
+                        <headImg dealer_btn="{{dealer_btn}}" defaultUserInfo="{{defaultUserInfo}}" headImageData="{{seats[3]}}" isRight="{{false}}"></headImg>
+                    </view>
+                </view>
+                <view bindtouchstart="heel" class="operationItem" data-action="CALL">
+                    <view class="itemContentCall actionsContent">
+                        <image class="operationImg" src="../../images/train/watch.png"></image>
+                    </view>
+                    <view class="watch">{{amount==0?'看牌':'跟注'}}{{amount==0?'':amount}}</view>
+                </view>
+            </view>
+            <view class="operation" hidden="{{!annotation}}">
+                <view class="operationItem"></view>
+                <view class="operationItem operationTop" style="position: relative">
+                    <headImg dealer_btn="{{dealer_btn}}" defaultUserInfo="{{defaultUserInfo}}" headImageData="{{seats[3]}}" isRight="{{false}}"></headImg>
+                </view>
+                <view class="operationItem"></view>
+            </view>
+            <view class="myCard">
+                <image class="cardImg" src="../../images/puke/{{item}}.png" wx:for="{{myCard}}" wx:key="index"></image>
+            </view>
+            <view bindtap="remarkOn" class="bookContent" hidden="{{!disabledRemark}}">
+                <image class="book" src="../../images/train/book.png"></image>
+            </view>
+        </view>
+    </view>
+    <view bindtap="menuHidden" class="returnContent" data-step="0">
+        <image class="menu" src="../../images/train/menu.png"></image>
+    </view>
+</view>

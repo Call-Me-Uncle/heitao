@@ -1,0 +1,16 @@
+<view class="isSliderContent" hidden="{{isSilder}}">
+    <view style="width:750rpx;position:relative;">
+        <view catchtap="handleTap2" class="weui-slider-box">
+            <view class="weui-slider" id="slider">
+                <view class="weui-slider-inner">
+                    <view bindtouchend="touchEnd" bindtouchmove="clickMove" bindtouchstart="touchStart" class="weui-slider-handler" style="left:{{iconLeft}};">
+                        <view class="bggg"></view>
+                        <text class="weui-slider-number">{{changeMIn}}</text>
+                    </view>
+                </view>
+                <view class="sliderProgress" style="width: {{sliderProgress}}rpx;"></view>
+            </view>
+            <view class="weui-slider-box-value" id="sliderValue">{{max}}</view>
+        </view>
+    </view>
+</view>

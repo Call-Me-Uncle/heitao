@@ -1,0 +1,21 @@
+<import src="../../template/template.wxml"></import>
+<header bind:back="back" id="head" imgHidden="{{false}}" left="返回" statusBarHeight="{{statusBarHeight}}" title="我的订单"></header>
+<view bindtap="itemClick">
+    <template is="noData" data="{{name:'你还没有相关订单哦(╯︵╰)',height:scrollHeight,dataHidden:dataHidden,imgSrc:'../../images/icons/noData2.png'}}"></template>
+</view>
+<scroll-view bindscrolltolower="scrollTop" bindscrolltoupper="scrollBottom" enableBackToTop="{{true}}" lowerThreshold="5" scrollY="{{true}}" style="height:{{scrollHeight}}px;" upperThreshold="1">
+    <view class="top">
+        <view bindtap="pay" class="itemContent" data-id="{{item.id}}" wx:for="{{lists}}" wx:key="index">
+            <view class="itemTopBorder">
+                <view class="itemCenter">
+                    <text>下单时间：{{item.createTime}}</text>
+                    <text>实付￥{{item.totalPrice}}</text>
+                </view>
+                <view class="orderInfo">订单编号：{{item.sn}}</view>
+                <view class="orderInfo">下单金额：{{item.productPrice}}元</view>
+                <view class="orderInfo" wx:if="{{item.beforeCoin}}">充值前桃子：{{item.beforeCoin}}</view>
+                <view class="orderInfo" wx:if="{{item.afterCoin}}">充值后桃子：{{item.afterCoin}}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
