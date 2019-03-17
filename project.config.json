@@ -8,11 +8,12 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.1",
-	"appid": "wxbd6a673dec56fe26",
+	"appid": "wx7c73e0def6b2affd",
 	"projectname": "heitao",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -102,7 +102,7 @@ Page({
     },
     entryType: function(t) {
         var a = this;
-        debugger
+        // debugger
         getApp().globalData.util.wxRequest("/countCodeImgeNum", "post", {
             type: t
         }, function(t) {
@@ -324,7 +324,7 @@ Page({
      * @return {[type]}   [description]
      */
     continueTest: function(t) {
-        debugger
+        // debugger
         t && (this.setData({
             contentHidden: !0,
             dHidden: !1,
@@ -340,7 +340,7 @@ Page({
      */
     confirmEvent: function() {
         var t = this;
-        debugger
+        // debugger
         "否" == this.selectComponent("#dialog").data.cancelText ? wx.navigateTo({
             url: "../practice/practice?id=" + t.data.continueTest + "&gameCard=" + !1
         }) : this.data.evaluation && this.evaluation(), this.selectComponent("#dialog").hideDialog();
@@ -354,7 +354,7 @@ Page({
     },
     shareEWM: function(t) {
         var a = this;
-        debugger
+        // debugger
         1007 == getApp().globalData.scene || 1008 == getApp().globalData.scene || 1044 == getApp().globalData.scene || 1047 == getApp().globalData.scene || 1048 == getApp().globalData.scene || 1049 == getApp().globalData.scene ? a.data.options.trainId ? getApp().globalData.util.wxPracticeRequest("/trainHh/show", "post", {
             encryptData: a.data.options.trainId
         }, function(t) {
@@ -477,7 +477,7 @@ Page({
      * evaluation：评测
      */
     evaluation: function() {
-      debugger
+      // debugger
         this.setData({
             contentHidden: !0,
             dHidden: !0,

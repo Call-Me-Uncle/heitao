@@ -32,12 +32,6 @@
         "custom": false,
         "list": [
             {
-                "pagePath": "pages/level/level",
-                "text": "水平",
-                "iconPath": "images/icons/nav1.png",
-                "selectedIconPath": "images/icons/nav2.png"
-            },
-            {
                 "pagePath": "pages/catalog/catalog",
                 "text": "专项训练",
                 "iconPath": "images/icons/nav3.png",
@@ -54,12 +48,6 @@
                 "text": "视频教程",
                 "iconPath": "images/icons/nav7.png",
                 "selectedIconPath": "images/icons/nav8.png"
-            },
-            {
-                "pagePath": "pages/mine/mine",
-                "text": "我的",
-                "iconPath": "images/icons/nav9.png",
-                "selectedIconPath": "images/icons/nav10.png"
             }
         ]
     },

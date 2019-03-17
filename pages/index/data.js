@@ -2,17 +2,18 @@ var res = {
 	"success": true,
 	"data": {
 		"userInfo": {
-			"id": 37026,
-			"userName": "小新不眨眼",
-			"avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83epibWGBicjxNBLEc3J3YicicUjFSPnCZ0LkkCAOaec2UDsiaExQvrBhHsqHwiaqLibIczsgPbeFMuzqf8ibCg/132",
-			"totalScore": 21,
-			"isMember": 0,
+			"id": 41596,
+			"userName": "哈哈哈",
+			"avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/fH5ialbibyrWianEBOopr4Swibwkl411h8gZPRuLjfUD9YbVEqcPa6bu1EibfK9E6dn5EpmRoOSicCK2wwMhAQ5JSmsQ/132",
+			"totalScore": 38,
+			"isMember": 1,
+			"memberEndTime": 1560268800000,
 			"coin": 0.00,
 			"isNotice": 1,
-			"totalTrainCount": 30,
+			"totalTrainCount": 240,
 			"noviceGuideStatus": 126,
 			"noviceGuideNum": 6,
-			"totalSpend": 0.00,
+			"totalSpend": 1499.00,
 			"isWxFriend": 2
 		},
 		"warnMap": {
@@ -61,7 +62,6 @@ var res = {
 				"shortName": "扑克水平"
 			}
 		},
-		"loginRemind": "[{\"text_position\":\"left\",\"color\":\"#fff\",\"font_size\":\"16px\",\"weight\":400,\"text\":\"连续签到第1天\",\"type\":\"text\",\"click\":false},{\"click\":false,\"color\":\"#fff\",\"font_size\":\"16px\",\"text\":\"https://www.heitaodashi.cn/image/mini_app/sign_in/day01.png\",\"text_position\":\"left\",\"type\":\"tipsImg\",\"weight\":400}]",
 		"mainButtonList": [{
 			"id": 23,
 			"name": "mainButtons",
@@ -87,7 +87,7 @@ var res = {
 			"sortNum": 3,
 			"arrayValue": ["训练ante桌", "https://www.heitaodashi.cn/image/mini_app/index/vip.png", "8人ante+straddle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
 		}],
-		"token": "de87e4b9d3b54171b30669d1f18e257e"
+		"token": "83fe62af86614375a116565ed2b9075f"
 	},
 	"code": 200
 }

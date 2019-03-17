@@ -43,18 +43,18 @@ Page({
         this.remark = this.selectComponent("#remark"), this.isSlider = this.selectComponent("#isSlider"), 
         this.dialogModel = this.selectComponent("#dialogModel");
         var t = this;
-        t.getGAme("/getNextHh", {})
-        // "true" == t.data.options.gameCard ? t.data.options.id ? (t.setData({
-        //     remarkConfirm: {
-        //         text: ""
-        //     }
-        // }), t.getGAme("/trainHh/show", {
-        //     encryptData: t.data.options.id
-        // })) : t.getGAme("/getNextHh", {
-        //     themeId: t.data.options.KnowledgeId
-        // }) : 0 == t.data.options.id ? t.getGAme("/getNextHh", {}) : t.getGAme("/getNextHh", {
-        //     themeId: t.data.options.id
-        // });
+        // t.getGAme("/getNextHh", {})
+        "true" == t.data.options.gameCard ? t.data.options.id ? (t.setData({
+            remarkConfirm: {
+                text: ""
+            }
+        }), t.getGAme("/trainHh/show", {
+            encryptData: t.data.options.id
+        })) : t.getGAme("/getNextHh", {
+            themeId: t.data.options.KnowledgeId
+        }) : 0 == t.data.options.id ? t.getGAme("/getNextHh", {}) : t.getGAme("/getNextHh", {
+            themeId: t.data.options.id
+        });
     },
     /**
      * [description]
